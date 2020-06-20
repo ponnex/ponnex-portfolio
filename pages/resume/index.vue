@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-			Software
+			Resume
     </div>
   </div>
 </template>

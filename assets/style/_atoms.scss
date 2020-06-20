@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'color-themes';
+
+.nav-items {
+	font-family: 'CarmenSans-Medium';
+	font-size: 26px;
+	color: $mid-gray;
+	padding: 0 $spacer--smallest 0 $spacer--smallest;
+	cursor: pointer;
+	&.selected {
+		font-family: 'CarmenSans-Bold';
+		font-size: 28px;
+		@include themed() {
+      color: t($nav-text);
+		}
+		padding-top: $icon-nav-selector;
+	}
+	&.selected::after {
+		content: ' ';
+		height: $icon-nav-selector;
+		width: $icon-nav-selector;
+		@include themed() {
+      background-color: t($nav-selector-color);
+		}
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -3,16 +3,22 @@
 //shortcuts
 $bg: 'bg';
 $text: 'text';
+$nav-text: 'nav-text';
+$nav-selector-color: 'nav-selector-color';
 
 //themes
 $themes: (
   default: (
     bg: $tuna,
-    text: $athens-gray
+    text: $athens-gray,
+    nav-text: $athens-gray,
+    nav-selector-color: $texas-rose
   ),
   light: (
     bg: $desert-storm,
-    text: $mine-shaft
+    text: $mine-shaft,
+    nav-text: $texas-rose,
+    nav-selector-color: $mid-gray
   )
 );
 
