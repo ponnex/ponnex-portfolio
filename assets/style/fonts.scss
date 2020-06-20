@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "CarmenSans-Regular";
+  src: url("/fonts/CarmenSansRegular.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/CarmenSansRegular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/fonts/CarmenSansRegular.otf") format("opentype"), /* Open Type Font */
+    url("/fonts/CarmenSansRegular.svg") format("svg"), /* Legacy iOS */
+    url("/fonts/CarmenSansRegular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/fonts/CarmenSansRegular.woff") format("woff"), /* Modern Browsers */
+    url("/fonts/CarmenSansRegular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CarmenSans-Heavy";
+  src: url("/fonts/CarmenSansHeavy.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/CarmenSansHeavy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/fonts/CarmenSansHeavy.otf") format("opentype"), /* Open Type Font */
+    url("/fonts/CarmenSansHeavy.svg") format("svg"), /* Legacy iOS */
+    url("/fonts/CarmenSansHeavy.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/fonts/CarmenSansHeavy.woff") format("woff"), /* Modern Browsers */
+    url("/fonts/CarmenSansHeavy.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,35 @@
+@import '_variables.scss';
+
+//shortcuts
+$bg: 'bg';
+$text: 'text';
+
+//themes
+$themes: (
+  default: (
+    bg: $tuna,
+    text: $athens-gray
+  ),
+  light: (
+    bg: $desert-storm,
+    text: $mine-shaft
+  )
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
