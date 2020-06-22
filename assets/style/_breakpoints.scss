@@ -1,0 +1,23 @@
+@import 'variables';
+$vw-viewport: 1440;
+$vw-enable: true;
+
+@media screen and (min-width: $screen-xs-min) {
+	$vw-viewport: $screen-xs-min;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	$vw-viewport: $screen-sm-min;
+}
+
+@media screen and (min-width: $screen-md-min) {
+	$vw-viewport: $screen-md-min;
+}
+
+@media screen and (min-width: $screen-lg-min) {
+	$vw-viewport: $screen-lg-min;
+}
+
+@media screen and (min-width: $screen-xl-min) {
+	$vw-viewport: $screen-xl-min;
+}

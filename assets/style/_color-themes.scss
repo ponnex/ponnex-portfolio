@@ -1,10 +1,14 @@
-@import '_variables.scss';
+@import 'variables';
 
 //shortcuts
 $bg: 'bg';
 $text: 'text';
 $nav-text: 'nav-text';
 $nav-selector-color: 'nav-selector-color';
+$article-content-color: 'article-content-color';
+$article-subcontent-color: 'article-subcontent-color';
+$hero-heading-color: 'hero-heading-color';
+$social-icons-color: 'social-icons-color';
 
 //themes
 $themes: (
@@ -12,13 +16,21 @@ $themes: (
     bg: $tuna,
     text: $athens-gray,
     nav-text: $athens-gray,
-    nav-selector-color: $texas-rose
+    nav-selector-color: $texas-rose,
+    article-content-color: $athens-gray,
+    article-subcontent-color: $alto,
+    hero-heading-color: $athens-gray,
+    social-icons-color: white
   ),
   light: (
     bg: $desert-storm,
     text: $mine-shaft,
     nav-text: $texas-rose,
-    nav-selector-color: $mid-gray
+    nav-selector-color: $mid-gray,
+    article-content-color: $mine-shaft,
+    article-subcontent-color: $dove-gray,
+    hero-heading-color: $mine-shaft,
+    social-icons-color: black
   )
 );
 

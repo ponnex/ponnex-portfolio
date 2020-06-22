@@ -1,21 +1,53 @@
+@import 'get-vw';
+
 .ico-hero {
 	height: $icon-hero;
+	height: get-vw($icon-hero);
 	width: $icon-hero;
+	width: get-vw($icon-hero);
 	background: url("~assets/images/svg/avatar.svg") no-repeat center center transparent;
 }
 
 .ico-sun {
 	height: $icon-theme-switcher;
+	height: get-vw($icon-theme-switcher);
 	width: $icon-theme-switcher;
+	width: get-vw($icon-theme-switcher);
 	margin: 0 0 0 $spacer--medium;
 	background: url("~assets/images/svg/sun.svg") no-repeat center center transparent;
 }
 
 .ico-moon {
 	height: $icon-theme-switcher;
+	height: get-vw($icon-theme-switcher);
 	width: $icon-theme-switcher;
+	width: get-vw($icon-theme-switcher);
 	margin: 0 0 0 $spacer--medium;
 	background: url("~assets/images/svg/moon.svg") no-repeat center center transparent;
+}
+
+.ico-linkedin {
+	height: $icon-social-media;
+	height: get-vw($icon-social-media);
+	width: $icon-social-media;
+	width: get-vw($icon-social-media);
+	background: url("~assets/images/svg/linkedin.svg") no-repeat center center transparent;
+}
+
+.ico-instagram {
+	height: $icon-social-media;
+	height: get-vw($icon-social-media);
+	width: $icon-social-media;
+	width: get-vw($icon-social-media);
+	background: url("~assets/images/svg/instagram.svg") no-repeat center center transparent;
+}
+
+.ico-github {
+	height: $icon-social-media;
+	height: get-vw($icon-social-media);
+	width: $icon-social-media;
+	width: get-vw($icon-social-media);
+	background: url("~assets/images/svg/github.svg") no-repeat center center transparent;
 }
 
 .icon {

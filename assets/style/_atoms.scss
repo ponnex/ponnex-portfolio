@@ -1,29 +1,133 @@
 @import 'variables';
 @import 'color-themes';
+@import 'get-vw';
+
+// --------ANIMATION---------//
+.anim-all {
+	transition: all ease-in-out .4s;
+}
+
+.anim-opacity {
+	transition: opacity ease-in-out .4s;
+}
+
+@keyframes spin {
+	from {
+			transform: translate(0deg);
+	}
+	to {
+			transform: rotate(360deg);
+	}
+}
+
+// --------- TYPOGRAPHY -------------//
+// --------- Headings -------------//
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 0.85em;
+    letter-spacing: 0.7px;
+}
+
+h1, 
+	.hero-heading {
+		margin-top: $hero-heading-margin-top;
+		margin-top: get-vw($hero-heading-margin-top);
+		font-family: 'CarmenSans-ExtraBold';
+		font-size: $hero-heading-font-size;
+		font-size: get-vw($hero-heading-font-size);
+		@include themed() {
+			color: t($hero-heading-color)
+		}
+	}
+
+h4 {
+		font-size: 16px;
+		font-size: get-vw(16px);
+    font-weight: 400;
+    letter-spacing: 0.34px;
+}
+
+.hero-heading::after {
+	content: ' ';
+	display: block;
+	margin-top: $hero-heading-underscore-margin-top;
+	margin-top: get-vw($hero-heading-underscore-margin-top);
+	width: $hero-heading-underscore-width;
+	width: get-vw($hero-heading-underscore-width);
+	height: $hero-heading-underscore-height;
+	height: get-vw($hero-heading-underscore-height);
+	background-color: $texas-rose;
+}
 
 .nav-items {
 	font-family: 'CarmenSans-Medium';
-	font-size: 26px;
+	font-size: $nav-items-font-size;
+	font-size: get-vw($nav-items-font-size);
 	color: $mid-gray;
 	padding: 0 $spacer--smallest 0 $spacer--smallest;
+	padding: 0 get-vw($spacer--smallest) 0 get-vw($spacer--smallest);
 	cursor: pointer;
 	&.selected {
 		font-family: 'CarmenSans-Bold';
-		font-size: 28px;
+		font-size: $nav-items-selected-font-size;
+		font-size: get-vw($nav-items-selected-font-size);
 		@include themed() {
       color: t($nav-text);
 		}
 		padding-top: $icon-nav-selector;
+		padding-top: get-vw($icon-nav-selector);
 	}
 	&.selected::after {
 		content: ' ';
 		height: $icon-nav-selector;
+		height: get-vw($icon-nav-selector);
 		width: $icon-nav-selector;
+		width: get-vw($icon-nav-selector);
 		@include themed() {
       background-color: t($nav-selector-color);
 		}
 		border-radius: 50%;
 		display: block;
 		margin: 0 auto;
+	}
+	&:hover {
+		@include themed() {
+      color: t($nav-text);
+		}
+	}
+}
+
+.icon-interactable {
+	&:hover {
+		opacity: 60%;
+	}
+}
+
+.article {
+	p {
+		max-width: fit-content;
+	}
+
+	&-heading {
+		font-family: 'Menlo-Bold';
+		font-size: $article-heading-font-size;
+		color: $waterloo;
+	}
+	&-content {
+		font-family: 'CarmenSans-Bold';
+		font-size: $article-content-font-size;
+		@include themed() {
+			color: t($article-content-color);
+		}
+	}
+	&-subcontent {
+		font-family: 'CarmenSans-Medium';
+		font-size: $article-subcontent-font-size;
+		font-size: get-vw($article-subcontent-font-size);
+		@include themed() {
+			color: t($article-subcontent-color);
+		}
 	}
 }

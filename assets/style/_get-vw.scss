@@ -1,0 +1,11 @@
+@import 'breakpoints';
+
+@function get-vw($font) {
+	@if $vw-enable {
+			$vw-context: $vw-viewport * 0.01 * 1px;
+
+			@return $font / $vw-context * 1vw;
+	}
+	@return $font;
+}
+  

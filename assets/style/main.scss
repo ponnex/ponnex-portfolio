@@ -5,6 +5,7 @@
 @import 'icons';
 @import 'fonts';
 @import 'color-themes';
+@import 'get-vw';
 
 .theme {
   height: 100vh;
@@ -31,22 +32,27 @@
 	
 	&__page {
     margin: 0 auto;
-    min-height: 100vh;
-    margin-bottom: ($footer-height * -1);
-    padding: $spacer--default (120px) $spacer--large;
+		min-height: 100vh;
+		margin-bottom: ($footer-height * -1);
+    margin-bottom: (get-vw($footer-height) * -1);
+		padding: $spacer--default (120px) $spacer--large;
+		padding: $spacer--default (get-vw(120px)) get-vw($spacer--large);
 
     &:after {
       content: "";
       display: block;
-      height: $footer-height;
+			height: $footer-height;
+			height: get-vw($footer-height);
     }
 
     @media (max-width: $screen-md-max) {
-      padding: $spacer--large $spacer--largest $spacer--large $spacer--largest;
+			padding: $spacer--large $spacer--largest $spacer--large $spacer--largest;
+			padding: get-vw($spacer--large) get-vw($spacer--largest) get-vw($spacer--large) get-vw($spacer--largest);
     }
 
     @media (max-width: $screen-xs-max) {
-      padding: 0 $spacer--medium $spacer--medium;
+			padding: 0 $spacer--medium $spacer--medium;
+			padding: 0 get-vw($spacer--medium) get-vw($spacer--medium);
     }
   }
 }

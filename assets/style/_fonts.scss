@@ -11,18 +11,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "CarmenSans-Heavy";
-  src: url("~assets/fonts/CarmenSansHeavy.eot"); /* IE9 Compat Modes */
-  src: url("~assets/fonts/CarmenSansHeavy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("~assets/fonts/CarmenSansHeavy.otf") format("opentype"), /* Open Type Font */
-    url("~assets/fonts/CarmenSansHeavy.svg") format("svg"), /* Legacy iOS */
-    url("~assets/fonts/CarmenSansHeavy.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("~assets/fonts/CarmenSansHeavy.woff") format("woff"), /* Modern Browsers */
-    url("~assets/fonts/CarmenSansHeavy.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "CarmenSans-Medium";
   src: url("~assets/fonts/CarmenSansMedium.eot"); /* IE9 Compat Modes */
   src: url("~assets/fonts/CarmenSansMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
@@ -43,6 +31,54 @@
     url("~assets/fonts/CarmenSansBold.ttf") format("truetype"), /* Safari, Android, iOS */
     url("~assets/fonts/CarmenSansBold.woff") format("woff"), /* Modern Browsers */
     url("~assets/fonts/CarmenSansBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CarmenSans-ExtraBold";
+  src: url("~assets/fonts/CarmenSansExtraBold.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/CarmenSansExtraBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/CarmenSansExtraBold.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/CarmenSansExtraBold.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/CarmenSansExtraBold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/CarmenSansExtraBold.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/CarmenSansExtraBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CarmenSans-Heavy";
+  src: url("~assets/fonts/CarmenSansHeavy.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/CarmenSansHeavy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/CarmenSansHeavy.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/CarmenSansHeavy.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/CarmenSansHeavy.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/CarmenSansHeavy.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/CarmenSansHeavy.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Menlo-Regular";
+  src: url("~assets/fonts/Menlo-Regular.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/Menlo-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/Menlo-Regular.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/Menlo-Regular.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/Menlo-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/Menlo-Regular.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/Menlo-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Menlo-Bold";
+  src: url("~assets/fonts/Menlo-Bold.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/Menlo-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/Menlo-Bold.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/Menlo-Bold.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/Menlo-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/Menlo-Bold.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/Menlo-Bold.woff2") format("woff2"); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
