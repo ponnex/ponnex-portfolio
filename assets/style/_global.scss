@@ -1,44 +1,136 @@
-@import 'variables';
+.loading {
+  color: $text--dark;
+  margin-top: calc(50vh - 20px);
+  text-align: center;
+}
 
-body,
 html {
-    padding: 0;
-    margin: 0;
-
-    font-family: 'GothamHTF', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    color: #2F292B;
-
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
+html,
 body {
-    // background-color: $salmon-color;
-    background-color: white;
+  font-family: $font-family;
+  background: $bg--dark--top;
+  font-size: $font-size--base;
+  line-height: $line-height--base;
+  font-weight: normal;
+
+  p {
+    white-space: pre-line;
+    font-size: $font-size--base;
+
+    @include themed() {
+      color: t($text);
+    }
+  }
+
+  ::selection {
+    background-color: $highlight-color;
+    color: #fff;
+  }
+
+  @media (max-width: $screen-md-max) {
+    font-size: $font-size--base--mobile;
+    line-height: $font-size--base--mobile * 1.5;
+
+    p {
+      font-size: $font-size--base--mobile;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
+.theme {
+  height: 100vh;
+  width: 100%;
 }
 
-.m-br {
+.base {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+
+  &:after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    overflow-y: auto;
+    min-height: 100vh;
+
+    @include themed() {
+      background: t($bg);
+    }
+  }
+
+  &__page {
+    margin: 0 auto;
+    min-height: 100vh;
+    margin-bottom: ($footer-height * -1);
+    padding: $spacer--default (120px) $spacer--large;
+
+    @media (max-width: $screen-lg-max) {
+      padding: $spacer--large;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 $spacer--medium $spacer--medium;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  margin-top: -10px;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.body,
+.navbar.header {
+  @media (max-width: $screen-md-max) {
+    padding: $spacer--smallest 0;
+  }
+}
+
+.spacer {
+  display: block;
+  width: 100%;
+
+  &--default {
+    height: $spacer--default;
+  }
+
+  &--smallest {
+    height: $spacer--smallest;
+  }
+
+  &--small {
+    height: $spacer--small;
+  }
+}
+
+.collapse {
+  display: none;
+
+  &.in {
     display: block;
+  }
 }
 
-.visually-hidden {
-    /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, 
+.clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, 
+.dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, 
+.modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, 
+.navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, 
+.pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: ' ';
 }

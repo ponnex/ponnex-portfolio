@@ -24,6 +24,7 @@ const config: Configuration = {
   ** Global CSS
   */
   css: [
+    'normalize.css/normalize.css',
     '@/assets/style/default.scss',
     '@/assets/style/main.scss'
   ],

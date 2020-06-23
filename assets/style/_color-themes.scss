@@ -1,5 +1,3 @@
-@import 'variables';
-
 //shortcuts
 $bg: 'bg';
 $text: 'text';
@@ -8,29 +6,35 @@ $nav-selector-color: 'nav-selector-color';
 $article-content-color: 'article-content-color';
 $article-subcontent-color: 'article-subcontent-color';
 $hero-heading-color: 'hero-heading-color';
-$social-icons-color: 'social-icons-color';
+$social-icons-filter: 'social-icons-filter';
+$hover: 'hover';
+$card-bg: 'card-bg';
 
 //themes
 $themes: (
   default: (
-    bg: $tuna,
-    text: $athens-gray,
+    bg: $bg--dark,
+    text: $text--dark,
     nav-text: $athens-gray,
     nav-selector-color: $texas-rose,
     article-content-color: $athens-gray,
     article-subcontent-color: $alto,
     hero-heading-color: $athens-gray,
-    social-icons-color: white
+    social-icons-filter: $social-icons-light,
+    hover: $hover--dark,
+    card-bg: $bg--card--dark
   ),
   light: (
-    bg: $desert-storm,
-    text: $mine-shaft,
+    bg: $bg--light,
+    text: $text--light,
     nav-text: $texas-rose,
     nav-selector-color: $mid-gray,
     article-content-color: $mine-shaft,
     article-subcontent-color: $dove-gray,
     hero-heading-color: $mine-shaft,
-    social-icons-color: black
+    social-icons-filter: $social-icons-dark,
+    hover: $hover--light,
+    card-bg: $bg--card--light
   )
 );
 

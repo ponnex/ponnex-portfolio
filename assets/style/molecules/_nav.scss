@@ -1,0 +1,268 @@
+.header.navbar {
+  $padding: $page-padding-mobile + 5;
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  width: calc(100% + 10px);
+  max-width: $navbar-max-width;
+  overflow-x: hidden;
+  padding: 0 0 $padding 0;
+  border: none;
+  box-shadow: none;
+  z-index: 100;
+  border-radius: 0;
+
+  .logo {
+    padding: 0 15px;
+
+    @media (max-width: $screen-xs) {
+      left: $spacer--small;
+    }
+	}
+
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0 -15px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 0 0 0;
+      margin: 0px -15px 0 -23px;
+    }
+	}
+
+	.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+		border-radius: 4px;
+		
+		.icon-bar {
+			display: block;
+			width: 25px;
+			height: 2px;
+			border-radius: 1px;
+			@include themed() {
+				background-color: t($text);
+			}
+		}
+		.icon-bar:not(:last-of-type) {
+			margin-bottom: 4px;
+		}
+	}
+
+  .navbar-collapse {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: auto;
+		float: right;
+
+    .nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+		}
+
+		.navbar-nav {
+			margin: 7.5px -15px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		.navbar-nav > li > a {
+			font-family: 'CarmenSans-Medium';
+			color: $mid-gray;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.navbar-nav > li {
+			margin-right: $spacer--nav-bar;
+		}
+
+		.navbar-nav > li.active > a {
+			font-family: 'CarmenSans-SemiBold';
+
+			@include themed() {
+				color: t($nav-text);
+			}
+		}
+
+    .header__links {
+			float: left;
+			
+			@media (max-width: $screen-sm-max) {
+				float: none;
+			}
+		}
+  }
+
+  &__utility,
+  &__links {
+    list-style: none;
+  }
+
+	.header-link {
+    margin: 0 28px;
+    @extend .header-link;
+
+    a {
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+	.navbar-header {
+		float: left;
+
+		.navbar-toggle {
+			display: none;
+		}
+	}
+
+	.navbar-collapse.collapse {
+		display: block!important;
+		height: auto!important;
+		padding-bottom: 0;
+		overflow: visible!important;
+
+		.navbar-right {
+			float: right !important;
+			margin-right: -15px;
+		}
+
+		.navbar-nav > li {
+			float: left;
+			padding: 8px 0;
+		}
+
+		.navbar-nav > li > a {
+			font-size: $font-size--navbar;
+		}
+
+		.navbar-nav > li:not(.active):hover > a{
+			filter: opacity(0.5)
+		}
+
+		.navbar-nav > li.active::before {
+			content: ' ';
+			display: block;
+			height: 6px;
+			width: 6px;
+			border-radius: 50%;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: width .3s ease-in-out;
+			@include themed() {
+				background-color: t($nav-selector-color)
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+  .header.navbar {
+    top: 0;
+    padding: 0 $page-padding-mobile 5px $page-padding-mobile;
+    margin-bottom: $spacer--smallest;
+
+    .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
+		}
+
+		.navbar-nav > li > a {
+			font-size: $font-size--tertiary;
+		}
+
+		.navbar-nav > li.active{
+			@include themed() {
+				background: t($hover);
+			}
+		}
+
+		.navbar-nav > li:hover {
+			@include themed() {
+				background: t($hover);
+			}
+			a {
+				@include themed() {
+					color: t($nav-text);
+				}
+			}
+		}
+
+		.navbar-nav > li.active::before {
+			content: "";
+			height: 100%;
+			position: absolute;
+			left: 3px;
+			top: 0;
+			transform: translateX(-50%);
+			transition: width .3s ease-in-out;
+			width: 4px;
+			@include themed() {
+				background-color: t($nav-selector-color)
+			}
+		}
+
+    .navbar-toggle {
+      margin-top: 30px;
+
+      &:hover, &:focus {
+        @include themed() {
+          background: t($hover);
+        }
+      }
+    }
+
+    .logo {
+			position: absolute;
+			height: 32px;
+			width: 32px;
+      top: 40px;
+      left: 0;
+      padding: 0;
+		}
+		
+		.theme-toggle {
+			li {
+				padding: 15px 15px;
+			}
+			a {
+				height: 20px;
+				width: 20px;
+				margin: 0 0 0 25px;
+			}
+		}
+
+    .navbar-collapse {
+      border-color: transparent;
+      overflow-x: hidden;
+			width: 100%;
+      margin: $spacer--small 0 $spacer--small 0;
+      @include card-shadow;
+
+      .header__links {
+        float: none;
+      }
+
+      @include themed() {
+        background: t($card-bg);
+      }
+    }
+  }
+}

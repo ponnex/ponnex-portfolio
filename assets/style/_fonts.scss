@@ -23,6 +23,18 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "CarmenSans-SemiBold";
+  src: url("~assets/fonts/CarmenSansSemiBold.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/CarmenSansSemiBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/CarmenSansSemiBold.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/CarmenSansSemiBold.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/CarmenSansSemiBold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/CarmenSansSemiBold.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/CarmenSansSemiBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "CarmenSans-Bold";
   src: url("~assets/fonts/CarmenSansBold.eot"); /* IE9 Compat Modes */
   src: url("~assets/fonts/CarmenSansBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
