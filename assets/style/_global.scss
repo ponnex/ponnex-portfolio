@@ -74,15 +74,6 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     margin-bottom: ($footer-height * -1);
-    padding: $spacer--default (120px) $spacer--large;
-
-    @media (max-width: $screen-lg-max) {
-      padding: $spacer--large;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      padding: 0 $spacer--medium $spacer--medium;
-    }
   }
 }
 
@@ -91,9 +82,17 @@ body {
   margin-top: -10px;
   overflow: hidden;
   word-break: break-word;
+  padding: $spacer--default (120px) $spacer--large;
+
+  @media (max-width: $screen-md-max) {
+    padding: $spacer--default $spacer--large $spacer--large;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: $spacer--medium $spacer--medium;
+  }
 }
 
-.body,
 .navbar.header {
   @media (max-width: $screen-md-max) {
     padding: $spacer--smallest 0;
@@ -125,12 +124,3 @@ body {
   }
 }
 
-.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, 
-.clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, 
-.dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, 
-.modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, 
-.navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, 
-.pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
-    display: table;
-    content: ' ';
-}

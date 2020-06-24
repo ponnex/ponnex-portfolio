@@ -1,8 +1,6 @@
 <template>
-  <div class="container">
-    <div>
-			Resume
-    </div>
+  <div class="resume">
+    <span>Resume</span>
   </div>
 </template>
 

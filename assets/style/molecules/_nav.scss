@@ -1,19 +1,29 @@
 .header.navbar {
   $padding: $page-padding-mobile + 5;
-  position: sticky;
-  top: 0;
-  margin: 0 auto;
-  width: calc(100% + 10px);
+	position: sticky;
+	margin-top: 55px;
   max-width: $navbar-max-width;
   overflow-x: hidden;
-  padding: 0 0 $padding 0;
+  padding: $padding 0;
   border: none;
   box-shadow: none;
   z-index: 100;
-  border-radius: 0;
+	border-radius: 0;
+	backdrop-filter: blur(8px);
+
+	&.is-sticky {
+		box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	// @media (min-width: $screen-md-min) {
+	// 	padding: $navbar-padding 0;
+	// }
 
   .logo {
-    padding: 0 15px;
+		position: absolute;
+		height: 48px;
+		width: 48px;
+		top: 25px;
 
     @media (max-width: $screen-xs) {
       left: $spacer--small;
@@ -21,23 +31,14 @@
 	}
 
   .container {
-    width: 100%;
-    padding: 0;
-    margin: 0 -15px;
-
-    @media (max-width: $screen-sm-max) {
-      padding: 10px 0 0 0;
-      margin: 0px -15px 0 -23px;
-    }
+		margin: 0px -15px 0 -23px;
 	}
 
 	.navbar-toggle {
     position: relative;
     float: right;
     padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    margin: 0;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -66,26 +67,15 @@
 
     .nav {
       list-style-type: none;
-      margin: 0;
       padding: 0;
       overflow: hidden;
 		}
 
-		.navbar-nav {
-			margin: 7.5px -15px;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-		
 		.navbar-nav > li > a {
 			font-family: 'CarmenSans-Medium';
 			color: $mid-gray;
 			text-decoration: none;
 			cursor: pointer;
-		}
-
-		.navbar-nav > li {
-			margin-right: $spacer--nav-bar;
 		}
 
 		.navbar-nav > li.active > a {
@@ -111,9 +101,6 @@
   }
 
 	.header-link {
-    margin: 0 28px;
-    @extend .header-link;
-
     a {
       svg {
         font-size: 20px;
@@ -123,12 +110,20 @@
 }
 
 @media (min-width: $screen-md-min) {
+	.container {
+		padding: 0 94px;
+	}
+
 	.navbar-header {
 		float: left;
 
 		.navbar-toggle {
 			display: none;
 		}
+	}
+
+	.theme-toggle > span {
+		margin: 5px 0 0 ($spacer--default + 5px);
 	}
 
 	.navbar-collapse.collapse {
@@ -140,6 +135,10 @@
 		.navbar-right {
 			float: right !important;
 			margin-right: -15px;
+		}
+
+		.navbar-nav {
+			margin: 0;
 		}
 
 		.navbar-nav > li {
@@ -173,13 +172,32 @@
 	}
 }
 
+@media (min-width: $screen-lg-min) {
+	.container {
+		padding: 0 140px;
+	}
+
+	.theme-toggle > span {
+		margin: 12px 0 0 ($spacer--default + 5px);
+	}
+}
+
 @media (max-width: $screen-sm-max) {
   .header.navbar {
-    top: 0;
-    padding: 0 $page-padding-mobile 5px $page-padding-mobile;
-    margin-bottom: $spacer--smallest;
+		margin-bottom: $spacer--small;
+		top: 0;
+  	margin: 0 auto;
+		
+		.container {
+			padding: 0 $spacer--large;
+		}
+
+		.header-link {
+			margin: 0 28px;
+		}
 
     .navbar-nav {
+			margin: 7.5px -28px;
       margin-top: 0;
       margin-bottom: 0;
 		}
@@ -209,7 +227,7 @@
 			content: "";
 			height: 100%;
 			position: absolute;
-			left: 3px;
+			left: 2px;
 			top: 0;
 			transform: translateX(-50%);
 			transition: width .3s ease-in-out;
@@ -220,8 +238,6 @@
 		}
 
     .navbar-toggle {
-      margin-top: 30px;
-
       &:hover, &:focus {
         @include themed() {
           background: t($hover);
@@ -230,22 +246,17 @@
     }
 
     .logo {
-			position: absolute;
 			height: 32px;
 			width: 32px;
-      top: 40px;
-      left: 0;
-      padding: 0;
+			top: 18px;
 		}
 		
 		.theme-toggle {
-			li {
-				padding: 15px 15px;
-			}
-			a {
-				height: 20px;
-				width: 20px;
-				margin: 0 0 0 25px;
+			padding: 5px;
+			span {
+				height: 25px;
+				width: 25px;
+				margin: 5px 0 0 30px;
 			}
 		}
 
