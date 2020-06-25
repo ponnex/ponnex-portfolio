@@ -33,7 +33,8 @@ const config: Configuration = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/helpers.ts'
+    '@/plugins/helpers.ts',
+    '@/plugins/unfocus.js'
   ],
   /*
   ** Nuxt.js dev-modules

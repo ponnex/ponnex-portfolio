@@ -7,17 +7,13 @@
   box-shadow: none;
   z-index: 100;
 	border-radius: 0;
-	backdrop-filter: blur(8px);
 	margin-left: auto;
   margin-right: auto;
 
 	&.is-sticky {
-		box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.19);
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+		backdrop-filter: blur(8px);
 	}
-	
-	// @media (min-width: $screen-md-min) {
-	// 	padding: $navbar-padding 0;
-	// }
 
   .logo {
 		position: absolute;
@@ -266,16 +262,18 @@
       border-color: transparent;
       overflow-x: hidden;
 			width: 100%;
-      margin: $spacer--small 0 $spacer--small 0;
-      @include card-shadow;
+			padding: 1px;
 
       .header__links {
         float: none;
-      }
-
-      @include themed() {
-        background: t($card-bg);
-      }
+			}
+			
+			.link-container {
+				@include card-shadow;
+				@include themed() {
+					background: t($card-bg);
+				}
+			}
     }
   }
 }
