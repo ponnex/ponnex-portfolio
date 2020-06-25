@@ -82,6 +82,27 @@ export default class NavBarComponent extends Vue {
    */
   toggleTheme() {
     this.isCollapsed = !this.isCollapsed;
+	}
+	
+	/**
+   * Vue mounted lifecycle hook
+   */
+  mounted() {
+    this.animationLoop();
+  }
+
+	/**
+	 * Function loop for listening scroll position Y using requestAnimationFrame
+	 */
+  animationLoop() {
+    let { browser, isTablet, isMobile } = this.$util.browserDetails();
+    let navbarTagEl = window.document.querySelector('.navbar') as HTMLElement;
+    if (window.scrollY > (isMobile ? 1 : 55)) {
+      if (navbarTagEl) navbarTagEl.classList.add('is-sticky');
+    } else {
+      if (navbarTagEl) navbarTagEl.classList.remove('is-sticky');
+    }
+    requestAnimationFrame(this.animationLoop);
   }
 }
 </script>

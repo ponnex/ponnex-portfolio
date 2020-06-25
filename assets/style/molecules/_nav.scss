@@ -1,9 +1,8 @@
 .header.navbar {
-  $padding: $page-padding-mobile + 5;
 	position: sticky;
+	top: 0;
   max-width: $navbar-max-width;
   overflow-x: hidden;
-  padding: $padding 0;
   border: none;
   box-shadow: none;
   z-index: 100;
@@ -24,7 +23,7 @@
 		position: absolute;
 		height: 48px;
 		width: 48px;
-		top: 25px;
+		top: 15px;
 
     @media (max-width: $screen-xs) {
       left: $spacer--small;
@@ -155,7 +154,7 @@
 			filter: opacity(0.5)
 		}
 
-		.navbar-nav > li.active::before {
+		.navbar-nav > li.active > a::before {
 			content: ' ';
 			display: block;
 			height: 6px;
@@ -185,7 +184,9 @@
 
 @media (max-width: $screen-sm-max) {
   .header.navbar {
+		$padding: $page-padding-mobile + 5;
 		margin-bottom: $spacer--small;
+		padding: $padding 0;
 		top: 0;
   	margin: 0 auto;
 		
@@ -224,7 +225,7 @@
 			}
 		}
 
-		.navbar-nav > li.active::before {
+		.navbar-nav > li.active > a::before {
 			content: "";
 			height: 100%;
 			position: absolute;

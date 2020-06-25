@@ -38,22 +38,5 @@ export default class Default extends Vue {
   onThemeChanged(theme: string) {
     this.theme = theme;
   }
-
-  /**
-   * Vue mounted lifecycle hook
-   */
-  mounted() {
-    this.animationLoop();
-  }
-
-  animationLoop() {
-    let navbarTagEl = window.document.querySelector('.navbar') as HTMLElement;
-    if (window.scrollY > 15) {
-      if (navbarTagEl) navbarTagEl.classList.add('is-sticky');
-    } else {
-      if (navbarTagEl) navbarTagEl.classList.remove('is-sticky');
-    }
-    requestAnimationFrame(this.animationLoop);
-  }
 }
 </script>
