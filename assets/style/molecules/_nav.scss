@@ -1,7 +1,6 @@
 .header.navbar {
   $padding: $page-padding-mobile + 5;
 	position: sticky;
-	margin-top: 55px;
   max-width: $navbar-max-width;
   overflow-x: hidden;
   padding: $padding 0;
@@ -10,6 +9,8 @@
   z-index: 100;
 	border-radius: 0;
 	backdrop-filter: blur(8px);
+	margin-left: auto;
+  margin-right: auto;
 
 	&.is-sticky {
 		box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.19);

@@ -75,6 +75,16 @@ body {
     min-height: 100vh;
     margin-bottom: ($footer-height * -1);
   }
+  @media (min-width: $screen-lg-min) {
+    &__page::before {
+        content: ' ';
+        display: block;
+        height: 55px;
+        @include themed() {
+          background: t($bg);
+        }
+    }
+  }
 }
 
 .body {
