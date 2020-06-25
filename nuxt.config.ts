@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types';
+import { ProvidePlugin } from 'webpack';
 
 const config: Configuration = {
   mode: 'spa',
@@ -62,7 +63,12 @@ const config: Configuration = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    plugins: [
+      new ProvidePlugin({
+          '_': 'lodash'
+      })
+    ]
   }
 }
 

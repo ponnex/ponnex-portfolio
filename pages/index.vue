@@ -1,10 +1,10 @@
 <template>
-  <div class='portfolio'>
+  <div class="portfolio">
     <span>Portfolio</span>
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component

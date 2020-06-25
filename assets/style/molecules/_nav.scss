@@ -150,7 +150,7 @@
 			font-size: $font-size--navbar;
 		}
 
-		.navbar-nav > li:not(.active):hover > a{
+		.navbar-nav > li:not(.active):hover > a, .navbar-nav > li:not(.active):hover > span{
 			filter: opacity(0.5)
 		}
 
