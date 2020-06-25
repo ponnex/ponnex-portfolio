@@ -1,11 +1,12 @@
 <template>
-  <div class="portfolio">
+  <div class='portfolio'>
     <span>Portfolio</span>
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Vue, Component } from 'nuxt-property-decorator';
+import { directive as onClickaway } from 'vue-clickaway';
 
 @Component
 export default class IndexPage extends Vue {

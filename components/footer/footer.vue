@@ -1,6 +1,6 @@
 <template>
-  <div class='resume'>
-    <span>Resume</span>
+  <div class='container'>
+    Footer
   </div>
 </template>
 
@@ -8,11 +8,7 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
-export default class SoftwarePage extends Vue {
-
+export default class FooterComponent extends Vue {
+  
 }
 </script>
-
-<style lang='scss' scoped>
-
-</style>
