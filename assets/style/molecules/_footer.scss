@@ -1,0 +1,141 @@
+.footer {
+  &__container {
+		font-family: 'CarmenSans-Medium';
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+		padding: 50px 120px 65px;
+    @media (max-width: $screen-md-max) {
+      padding: $spacer--default $spacer--large $spacer--large;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: $spacer--medium $spacer--medium;
+    }
+  }
+  &__information {
+		display: flex;
+		@media (max-width: $screen-sm-max) {
+			display: block;
+		}
+  }
+  &__social {
+		margin-top: 200px;
+		@media (max-width: $screen-md-max) {
+			margin-top: 90px;
+		}
+		text-align: center;
+		.salutation {
+			margin-top: 15px;
+			font-size: 14px;
+			span:nth-child(1) {
+				font-family: 'CarmenSans-ExtraBold';
+				@include themed() {
+					color: t($footer-salutation-text-1);
+				}
+			}
+			span:nth-child(2) {
+				@include themed() {
+					color: t($footer-salutation-text-2);
+				}
+			}
+		}
+		.social-icons {
+			margin-top: 25px;
+			a {
+				margin: 0 10px;
+			}
+		}
+	}
+	&__section {
+		@media (min-width: $screen-md-min) {
+			width: 50%;
+		}
+
+		&.section-1 > * {
+			margin-bottom: 60px;
+			@media (max-width: $screen-sm-max) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&.section-1 {
+			@media (max-width: $screen-sm-max) {
+				text-align: center;
+				.section-title > * {
+					display: inline;
+				}
+			}
+			.contact-container {
+				font-family: 'CarmenSans-Semibold';
+				font-size: 18px;
+				color: $texas-rose;
+
+				.contact-email {
+					border-bottom: solid #ffc34d 2px;
+    			padding-bottom: 2px;
+				}
+
+				.ico-email {
+					margin-left: 20px;
+					vertical-align: middle;
+					@include themed() {
+						color: t($footer-icon-email);
+					}
+				}
+			}
+		}
+
+		&.section-2 > * {
+			margin-bottom: 40px;
+		}
+
+		&.section-2 {
+			@media (max-width: $screen-sm-max) {
+				margin-top: 90px;
+			}
+			.section-title {
+				font-family: 'CarmenSans-Bold';
+			}
+			.text-input {
+				display: block;
+				width: 100%;
+				margin-top: 18px;
+				background-color: transparent;
+    		border-bottom: solid $mid-gray 1px;
+			}
+			.ico-arrow {
+				border-bottom: solid #ffc34d 2px;
+			}
+			.attachment > span:not(:first-of-type) {
+				float: right;
+				margin: 0 10px;
+				padding-bottom: 8px;
+			}
+		}
+
+		.section-title {
+			line-height: initial;
+			@media (max-width: $screen-sm-max) {
+				text-align: center;
+			}
+		}
+
+		.section-title > * {
+			display: block;
+			font-size: 30px;
+			@include themed() {
+				color: t($footer-title);
+			}
+		}
+		.section-description {
+			@media (min-width: $screen-md-min) {
+				width: 60%;
+			}
+			font-size: 16px;
+			@include themed() {
+				color: t($footer-title-desc)
+			}
+		}
+	}
+}

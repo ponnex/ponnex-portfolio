@@ -93,6 +93,12 @@ body {
   overflow: hidden;
   word-break: break-word;
   padding: $spacer--default (120px) $spacer--large;
+  div:first-child {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media (max-width: $screen-md-max) {
     padding: $spacer--default $spacer--large $spacer--large;

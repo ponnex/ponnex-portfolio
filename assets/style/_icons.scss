@@ -34,6 +34,24 @@
 	background: url("~assets/images/svg/github.svg") no-repeat center center transparent;
 }
 
+.ico-attachment {
+	height: $icon-attachment-height;
+	width: $icon-attachment-width;
+	background: url("~assets/images/svg/clip.svg") no-repeat center center transparent;
+}
+
+.ico-arrow {
+	height: $icon-arrow-height;
+	width: $icon-arrow-width;
+	background: url("~assets/images/svg/arrow.svg") no-repeat center center transparent;
+}
+
+.ico-email {
+	height: $icon-email-height;
+	width: $icon-email-width;
+	background: url("~assets/images/svg/email.svg") no-repeat center center transparent;
+}
+
 .icon {
 	display: inline-block;
 	background-size: contain;

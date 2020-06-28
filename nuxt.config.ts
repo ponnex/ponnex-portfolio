@@ -26,7 +26,6 @@ const config: Configuration = {
   */
   css: [
     'normalize.css/normalize.css',
-    '@/assets/style/default.scss',
     '@/assets/style/main.scss'
   ],
   /*

@@ -107,7 +107,7 @@
 
 @media (min-width: $screen-md-min) {
 	.container {
-		padding: 0 94px;
+		padding: 0 140px;
 	}
 
 	.navbar-header {
@@ -168,9 +168,15 @@
 	}
 }
 
-@media (min-width: $screen-lg-min) {
+@media (min-width: $screen-xl-max) {
 	.container {
-		padding: 0 140px;
+		padding: 0 24px;
+	}
+}
+
+@media (max-width: $screen-md-max) {
+	.container {
+		padding: 0 94px;
 	}
 
 	.theme-toggle > span {

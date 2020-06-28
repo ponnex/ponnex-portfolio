@@ -17,6 +17,12 @@ $icon-hero: 48px;
 $icon-theme-switcher: 32px;
 $icon-nav-selector: 6px;
 $icon-social-media: 16px;
+$icon-attachment-width: 17px;
+$icon-attachment-height: 18px;
+$icon-arrow-width: 14px;
+$icon-arrow-height: 12px;
+$icon-email-height: 14px;
+$icon-email-width: 19px;
 
 // spacers
 $spacer--largest: 120px;
@@ -82,6 +88,7 @@ $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
 $screen-lg-max:              ($screen-xl-min - 1);
+$screen-xl-max:              1940px;
 
 // colors
 $tuna: #333646;
@@ -97,6 +104,7 @@ $texas-rose: #ffc34d;
 $waterloo: #858690;
 $alto: #d1d1d1;
 $dove-gray: #6a6a6a;
+$manatee: #95969f;
 
 $bg--dark: $tuna;
 $bg--dark--top: $tuna;
@@ -114,6 +122,16 @@ $brand--blue--dark: lighten($brand--blue--light, 18%);
 $highlight-color: transparentize($brand--blue--light, .1);
 $hover--light: transparentize($brand--blue--light, .9);
 $hover--dark: transparentize(#fff, .9);
+$footer--title-dark: $athens-gray;
+$footer--title-light: $mine-shaft;
+$footer--title-desc-dark: $manatee;
+$footer--title-desc-light: $dove-gray;
+$footer--icon-email-dark: $athens-gray;
+$footer--icon-email-light: $mid-gray;
+$footer--salutation-text-1-dark: $athens-gray;
+$footer--salutation-text-2-dark: $athens-gray;
+$footer--salutation-text-1-light: $mine-shaft;
+$footer--salutation-text-2-light: $dove-gray;
 
 //GRADIENTS
 @mixin linear-gradient($from, $to) {

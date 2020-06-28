@@ -9,6 +9,11 @@ $hero-heading-color: 'hero-heading-color';
 $social-icons-filter: 'social-icons-filter';
 $hover: 'hover';
 $card-bg: 'card-bg';
+$footer-title: 'footer-title-dark';
+$footer-title-desc: 'footer-title-desc';
+$footer-icon-email: 'footer-icon-email';
+$footer-salutation-text-1: 'footer-salutation-text-1';
+$footer-salutation-text-2: 'footer-salutation-text-2';
 
 //themes
 $themes: (
@@ -22,7 +27,12 @@ $themes: (
     hero-heading-color: $athens-gray,
     social-icons-filter: $social-icons-light,
     hover: $hover--dark,
-    card-bg: $bg--card--dark
+    card-bg: $bg--card--dark,
+    footer-title: $footer--title-dark,
+    footer-title-desc: $footer--title-desc-dark,
+    footer-icon-email: $footer--icon-email-dark,
+    footer-salutation-text-1: $footer--salutation-text-1-dark,
+    footer-salutation-text-2: $footer--salutation-text-2-dark
   ),
   light: (
     bg: $bg--light,
@@ -34,7 +44,12 @@ $themes: (
     hero-heading-color: $mine-shaft,
     social-icons-filter: $social-icons-dark,
     hover: $hover--light,
-    card-bg: $bg--card--light
+    card-bg: $bg--card--light,
+    footer-title: $footer--title-light,
+    footer-title-desc: $footer--title-desc-light,
+    footer-icon-email: $footer--icon-email-light,
+    footer-salutation-text-1: $footer--salutation-text-1-light,
+    footer-salutation-text-2: $footer--salutation-text-2-light
   )
 );
 

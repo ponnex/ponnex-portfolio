@@ -9,6 +9,9 @@
           <main class="body">
             <nuxt />
           </main>
+          <footer>
+            <footer-component />
+          </footer>
         </div>
       </div>
     </div>
@@ -18,10 +21,12 @@
 <script lang='ts'>
 import { Vue, Component } from 'nuxt-property-decorator';
 import NavBarComponent from '@/components/navbar/navbar.vue';
+import FooterComponent from '@/components/footer/footer.vue';
 
 @Component({
   components: {
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   }
 })
 export default class Default extends Vue {
