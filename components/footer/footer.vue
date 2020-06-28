@@ -62,7 +62,6 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import Default from "@/layouts/default.vue";
 const api = require('@/environment/defaults.json');
 
 @Component

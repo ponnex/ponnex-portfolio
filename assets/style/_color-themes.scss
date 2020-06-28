@@ -15,6 +15,8 @@ $footer-icon-email: 'footer-icon-email';
 $footer-salutation-text-1: 'footer-salutation-text-1';
 $footer-salutation-text-2: 'footer-salutation-text-2';
 $social-icons-color: 'social-icons-color';
+$wip-bg: 'wip-bg';
+$icon-wip: 'icon-wip';
 
 //themes
 $themes: (
@@ -34,7 +36,9 @@ $themes: (
     footer-icon-email: $footer--icon-email-dark,
     footer-salutation-text-1: $footer--salutation-text-1-dark,
     footer-salutation-text-2: $footer--salutation-text-2-dark,
-    social-icons-color: brightness(1)
+    social-icons-color: brightness(1),
+    wip-bg: $wip--bg-dark,
+    icon-wip: $icon--wip-dark
   ),
   light: (
     bg: $bg--light,
@@ -52,7 +56,9 @@ $themes: (
     footer-icon-email: $footer--icon-email-light,
     footer-salutation-text-1: $footer--salutation-text-1-light,
     footer-salutation-text-2: $footer--salutation-text-2-light,
-    social-icons-color: brightness(0.2)
+    social-icons-color: brightness(0.2),
+    wip-bg: $wip--bg-light,
+    icon-wip: $icon--wip-light
   )
 );
 

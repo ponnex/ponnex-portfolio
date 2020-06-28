@@ -89,23 +89,25 @@ body {
 
 .body {
   display: flex;
-  margin-top: -10px;
+  // margin-top: -10px;
   overflow: hidden;
   word-break: break-word;
-  padding: $spacer--default (120px) $spacer--large;
+  // padding: $spacer--default (120px) $spacer--large; //padding: 50px 120px 65px;
+
   div:first-child {
     width: 100%;
+  }
+
+  div:first-child > * > * {
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  @media (max-width: $screen-md-max) {
-    padding: $spacer--default $spacer--large $spacer--large;
-  }
+  // @media (max-width: $screen-md-max) {
+  //   padding: $spacer--default $spacer--large $spacer--large;
+  // }
 
-  @media (max-width: $screen-sm-max) {
-    padding: $spacer--medium $spacer--medium;
+  @media (min-width: $screen-md-min) {
+    margin-top: 30px
   }
 }
 

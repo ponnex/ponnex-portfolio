@@ -23,6 +23,8 @@ $icon-arrow-width: 14px;
 $icon-arrow-height: 12px;
 $icon-email-height: 14px;
 $icon-email-width: 19px;
+$icon-wip-height: 183px;
+$icon-wip-width: 224px;
 
 // spacers
 $spacer--largest: 120px;
@@ -93,6 +95,7 @@ $screen-xl-max:              1940px;
 // colors
 $tuna: #333646;
 $charade: #252734;
+$yellow-sea: #ffae00;
 $athens-gray: #ebebec;
 $mine-shaft: #333333;
 $french-gray: #c8c8cc;
@@ -132,6 +135,10 @@ $footer--salutation-text-1-dark: $athens-gray;
 $footer--salutation-text-2-dark: $athens-gray;
 $footer--salutation-text-1-light: $mine-shaft;
 $footer--salutation-text-2-light: $dove-gray;
+$wip--bg-dark: $charade;
+$wip--bg-light: $yellow-sea;
+$icon--wip-dark: $yellow-sea;
+$icon--wip-light: $mine-shaft;
 
 //GRADIENTS
 @mixin linear-gradient($from, $to) {
