@@ -22,7 +22,7 @@
   &__social {
 		margin-top: 200px;
 		text-align: center;
-		
+
 		@media (max-width: $screen-md-max) {
 			margin-top: 90px;
 			.logo {
@@ -96,7 +96,7 @@
 			}
 		}
 
-		&.section-2 > * {
+		&.section-2 > form > * {
 			margin-bottom: 40px;
 		}
 
@@ -114,13 +114,35 @@
 				background-color: transparent;
     		border-bottom: solid $mid-gray 1px;
 			}
-			.ico-arrow {
-				border-bottom: solid #ffc34d 2px;
-			}
-			.attachment > span:not(:first-of-type) {
+			.contact-submit-btn {
 				float: right;
+			}
+			.ico-arrow {
 				margin: 0 10px;
 				padding-bottom: 8px;
+				cursor: pointer;
+				border-bottom: solid #ffc34d 2px;
+			}
+			.upload-wrapper {
+				position: relative;
+				overflow: hidden;
+				float: right;
+				margin: 0 15px;
+				padding-top: 4px;
+
+				.ico-attachment {
+					cursor: pointer;
+				}
+				
+				input[type=file] {
+					position: absolute;
+					width: 17px;
+					height: 18px;
+					left: 0;
+					font-size: 0;
+					opacity: 0;
+					cursor: pointer;
+				}
 			}
 		}
 

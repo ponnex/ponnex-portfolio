@@ -1,0 +1,53 @@
+.thankyou {
+	padding: 0 280px;
+	@media (max-width: $screen-lg-max) {
+		padding: 0;
+	}
+	&__heading {
+		display: block;
+		margin: 40px 0;
+		font-family: 'CarmenSans-Medium';
+		font-size: 48px;
+		@include themed() {
+			color: t($footer-title);
+		}
+	}
+
+	&__info {
+		display: block;
+		margin-bottom: 40px;
+		font-family: 'CarmenSans-Medium';
+		font-size: 24px;
+		@include themed() {
+			color: t($footer-title-desc);
+		}
+	}
+
+	&__email {
+		font-family: 'CarmenSans-SemiBold';
+		font-size: 24px;
+		color: $texas-rose;
+		border-bottom: solid $texas-rose 2px;
+		padding-bottom: 2px;
+		
+		@media (max-width: $screen-sm-max) {
+			font-size: 18px
+		}
+	}
+
+	&__contact > * {
+		display: inline;
+	}
+
+	.social-icons {
+		float: right;
+		a {
+			margin: 0 10px;
+			@media (max-width: $screen-sm-max) {
+				height: 14px;
+				width: 14px;
+				margin: 0 8px;
+			}
+		}
+	}
+}

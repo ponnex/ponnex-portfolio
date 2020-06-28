@@ -8,11 +8,7 @@
 import { Vue, Component } from 'nuxt-property-decorator';
 
 @Component
-export default class SoftwarePage extends Vue {
+export default class ResumePage extends Vue {
 
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

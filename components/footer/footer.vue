@@ -15,23 +15,34 @@
         </a>
       </div>
       <div class="footer__section section-2">
-        <div class="section-title">
-          <span>Estimate your project?</span>
-          <span>Let me know here.</span>
-        </div>
-        <div>
-          <span>What's your name?</span>
-          <input class="text-input" type="text" />
-        </div>
-        <div>
-          <span>Your fancy email</span>
-          <input class="text-input" type="text" />
-        </div>
-        <div class="attachment">
-          <span>Tell me about your project</span>
-          <span class="icon ico-arrow"></span>
-          <span class="icon ico-attachment"></span>
-        </div>
+        <form target="_blank" :action="`https://formsubmit.co/${apiDefaults.emailMask}`" method="POST" enctype="multipart/form-data">
+          <div class="section-title">
+            <span>Estimate your project?</span>
+            <span>Let me know here.</span>
+          </div>
+          <div>
+            <span>What's your name?</span>
+            <input class="text-input" type="text" name="name" required/>
+          </div>
+          <div>
+            <span>Your fancy email</span>
+            <input class="text-input" type="text" name="email" required/>
+          </div>
+          <div class="attachment">
+            <span>Tell me about your project</span>
+            <button type="submit" class="contact-submit-btn">
+              <span class="icon ico-arrow"></span>
+            </button>
+            <div class="upload-wrapper">
+              <span class="icon ico-attachment"></span>
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" :value="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`">
+              <input type="hidden" name="_subject" value="Web Portfolio: New submission!">
+              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!">
+              <input type="file" name="attachment" accept="image/png,image/jpeg,application/pdf,.rar.psd,application/zip" />
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="footer__social">
@@ -51,7 +62,23 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
+import Default from "@/layouts/default.vue";
+const api = require('@/environment/defaults.json');
 
 @Component
-export default class FooterComponent extends Vue {}
+export default class FooterComponent extends Vue {
+  /**
+   * Return default config data
+   */
+  get apiDefaults() {
+    return api;
+  }
+
+  /**
+   * Get current theme
+   */
+  get currentTheme() {
+    return 'default';
+  }
+}
 </script>

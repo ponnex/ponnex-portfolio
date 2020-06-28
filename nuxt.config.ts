@@ -1,5 +1,5 @@
 import { Configuration } from '@nuxt/types';
-import { ProvidePlugin } from 'webpack';
+import { ProvidePlugin, NormalModuleReplacementPlugin } from 'webpack';
 
 const config: Configuration = {
   mode: 'spa',
@@ -63,6 +63,12 @@ const config: Configuration = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      if (process.env.NODE_ENV == 'production') {
+				config.plugins!.push( new NormalModuleReplacementPlugin(
+					/environment\/defaults\.json/,
+					'@/environment/defaults.prod.json'
+				));
+			}
     },
     plugins: [
       new ProvidePlugin({
