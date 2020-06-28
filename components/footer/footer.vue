@@ -9,10 +9,10 @@
         <div>
           <p class="section-description">Sed ut perspiciatis unde commis iste natus error sit voluptatem accussantium.</p>
         </div>
-        <span class="contact-container">
+        <a href="mailto:ponnex@gmail.com" class="contact-container">
           <span class="contact-email">ponnex@gmail.com</span>
-          <i class="icon ico-email"></i>
-        </span>
+          <span class="icon ico-email"></span>
+        </a>
       </div>
       <div class="footer__section section-2">
         <div class="section-title">
