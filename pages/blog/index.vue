@@ -1,13 +1,18 @@
 <template>
   <div class="blog">
-    <div>Blog</div>
+    <wip-component />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import WipComponent from '@/components/wip/wip.vue';
 
-@Component
+@Component({
+  components: {
+    WipComponent
+  }
+})
 export default class BlogPage extends Vue {
 
 }
