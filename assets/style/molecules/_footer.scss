@@ -35,10 +35,8 @@
 			margin-top: 15px;
 			font-size: 14px;
 			span:nth-child(1) {
-				font-family: 'CarmenSans-ExtraBold';
-				@include themed() {
-					color: t($footer-salutation-text-1);
-				}
+				font-family: 'CarmenSans-Heavy';
+				color: $texas-rose;
 			}
 			span:nth-child(2) {
 				@include themed() {

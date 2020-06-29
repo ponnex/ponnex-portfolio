@@ -48,8 +48,8 @@
     <div class="footer__social">
       <i class="logo icon ico-hero"></i>
       <div class="salutation">
-        <span>Thanks for scrolling,</span>
-        <span>that's all folks.</span>
+        <span>&lt;/&gt;</span>
+        <span>with &#x1f496; by Emmanuel Francis Ramos Jr. © 2020</span>
       </div>
       <div class="social-icons">
         <a href="https://www.instagram.com/ponnexfpv" target="_blank" class="icon ico-instagram"></a>
