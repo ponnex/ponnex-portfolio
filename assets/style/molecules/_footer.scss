@@ -88,7 +88,7 @@
 					margin-left: 20px;
 					vertical-align: middle;
 					@include themed() {
-						color: t($footer-icon-email);
+						filter: t($social-icons-color);
 					}
 				}
 			}

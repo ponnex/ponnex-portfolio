@@ -1,5 +1,13 @@
 .resume {
-  padding: 0 120px;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 70px;
+  @media (max-width: $screen-sm-max) {
+		padding: 0 40px;
+	}
+	@media (min-width: $screen-lg-min) {
+		padding: 0 120px;
+	}
   &__links {
 		margin-bottom: 40px;
 		padding: 40px 0;
@@ -16,12 +24,19 @@
 				border-bottom: solid $yellow-sea 3px;
 				padding-bottom: 3px;
 			}
+			@media (max-width: $screen-sm-max) {
+				margin-top: 20px;
+				font-size: 20px;
+			}
 		}
 		a:first-child {
 			float: left;
 		}
     a:last-child {
-      float: right;
+			float: right;
+			@media (max-width: $screen-sm-max) {
+				float: left;
+			}
     }
 	}
 	.loading {

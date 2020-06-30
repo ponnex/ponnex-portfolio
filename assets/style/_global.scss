@@ -101,9 +101,9 @@ body {
   width: 100%;
 }
 
-.body > div:first-child > * > * {
-  max-width: 1600px;
-}
+// .body > div:first-child > * > * {
+//   max-width: 1600px;
+// }
 
 .navbar.header {
   @media (max-width: $screen-md-max) {
