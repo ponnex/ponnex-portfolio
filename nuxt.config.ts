@@ -55,7 +55,7 @@ const config: Configuration = {
    */
   recaptcha: {
     hideBadge: false,
-    siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    siteKey: '6Les9asZAAAAANDtLTCD5St3zAZKKoqHqSnF9W33',
     version: 2,
     size: 'invisible'
   },
