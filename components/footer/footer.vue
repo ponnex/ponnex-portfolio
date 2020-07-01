@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="footer__section section-2">
-        <form name="contact" target="_blank" data-netlify="true" data-netlify-recaptcha="true" :action="`${apiDefaults.thankYouPagePath}?theme=${currentTheme}`" method="POST" enctype="multipart/form-data">
+        <form name="contact" target="_blank" data-netlify="true" data-netlify-recaptcha="true" method="POST" enctype="multipart/form-data">
           <div class="section-title">
             <span>Estimate your project?</span>
             <span>Let me know here.</span>
