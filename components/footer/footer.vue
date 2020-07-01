@@ -7,7 +7,9 @@
           <span>Let's talk.</span>
         </div>
         <div>
-          <p class="section-description">Sed ut perspiciatis unde commis iste natus error sit voluptatem accussantium.</p>
+          <p
+            class="section-description"
+          >Sed ut perspiciatis unde commis iste natus error sit voluptatem accussantium.</p>
         </div>
         <a href="mailto:ponnex@gmail.com" class="contact-container">
           <span class="contact-email">ponnex@gmail.com</span>
@@ -15,18 +17,24 @@
         </a>
       </div>
       <div class="footer__section section-2">
-        <form name="contact" target="_blank" data-netlify="true" data-netlify-recaptcha="true" method="POST" enctype="multipart/form-data">
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          :action="`${apiDefaults.thankYouPagePath}?theme=${currentTheme}`"
+          method="POST"
+        >
           <div class="section-title">
             <span>Estimate your project?</span>
             <span>Let me know here.</span>
           </div>
           <div>
             <span>What's your name?</span>
-            <input class="text-input" type="text" name="name" required/>
+            <input class="text-input" type="text" name="name" required />
           </div>
           <div>
             <span>Your fancy email</span>
-            <input class="text-input" type="text" name="email" required/>
+            <input class="text-input" type="text" name="email" required />
           </div>
           <div class="attachment">
             <span>Tell me about your project</span>
@@ -38,8 +46,12 @@
               <!-- <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" :value="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`">
               <input type="hidden" name="_subject" value="Web Portfolio: New submission!">
-              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!"> -->
-              <input type="file" name="attachment" accept="image/png,image/jpeg,application/pdf,.rar.psd,application/zip" />
+              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!">-->
+              <input
+                type="file"
+                name="attachment"
+                accept="image/png, image/jpeg, application/pdf, .rar.psd, application/zip"
+              />
             </div>
           </div>
           <div data-netlify-recaptcha="true"></div>
@@ -63,7 +75,7 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-const api = require('@/environment/defaults.json');
+const api = require("@/environment/defaults.json");
 
 @Component
 export default class FooterComponent extends Vue {
@@ -78,7 +90,7 @@ export default class FooterComponent extends Vue {
    * Get current theme
    */
   get currentTheme() {
-    return 'default';
+    return "default";
   }
 }
 </script>
