@@ -43,7 +43,7 @@
 		font-family: 'CarmenSans-Medium';
 		font-size: 24px;
 		@include themed() {
-			color: t($text);
+			color: t($icon-wip);
 		}
 	}
 
