@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="footer__section section-2">
-        <form target="_blank" :action="`https://formsubmit.co/${apiDefaults.emailMask}`" method="POST" enctype="multipart/form-data">
+        <form name="contact" target="_blank" data-netlify="true" data-netlify-recaptcha="true" :action="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`" method="POST" enctype="multipart/form-data">
           <div class="section-title">
             <span>Estimate your project?</span>
             <span>Let me know here.</span>
@@ -35,13 +35,14 @@
             </button>
             <div class="upload-wrapper">
               <span class="icon ico-attachment"></span>
-              <input type="hidden" name="_captcha" value="false">
+              <!-- <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" :value="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`">
               <input type="hidden" name="_subject" value="Web Portfolio: New submission!">
-              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!">
+              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!"> -->
               <input type="file" name="attachment" accept="image/png,image/jpeg,application/pdf,.rar.psd,application/zip" />
             </div>
           </div>
+          <div data-netlify-recaptcha="true"></div>
         </form>
       </div>
     </div>
