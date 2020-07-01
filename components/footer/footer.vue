@@ -21,7 +21,7 @@
           name="contact"
           data-netlify="true"
           data-netlify-recaptcha="true"
-          :action="`/thankyou?theme=${currentTheme}`"
+          action="/thankyou"
           method="POST"
         >
           <div class="section-title">

@@ -1,7 +1,12 @@
 .thankyou {
+	max-width: 1600px;
+  margin: 0 auto;
 	padding: 0 280px;
-	@media (max-width: $screen-lg-max) {
-		padding: 0;
+	@media (max-width: $screen-md-max) {
+		padding: 0 65px;
+	}
+	@media (max-width: $screen-sm-max) {
+		padding: 0 40px;
 	}
 	&__heading {
 		display: block;
