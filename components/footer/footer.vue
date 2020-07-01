@@ -18,10 +18,12 @@
       </div>
       <div class="footer__section section-2">
         <form
+          ref="estimateForm"
           target="_blank"
           :action="`https://formsubmit.co/${apiDefaults.emailMask}`"
           method="POST"
           enctype="multipart/form-data"
+          @submit.prevent="onSubmit"
         >
           <div class="section-title">
             <span>Estimate your project?</span>
@@ -61,6 +63,7 @@
               />
             </div>
           </div>
+          <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" />
         </form>
       </div>
     </div>
@@ -81,6 +84,7 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
+import recaptcha from "@nuxtjs/recaptcha";
 const api = require("@/environment/defaults.json");
 
 @Component
@@ -97,6 +101,29 @@ export default class FooterComponent extends Vue {
    */
   get currentTheme() {
     return "default";
+  }
+
+  onError(error: any) {
+    console.log("Error happened:", error);
+  }
+
+  async onSubmit() {
+    try {
+      const token = await this.$recaptcha.getResponse();
+      await this.$recaptcha.reset();
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log("Login error:", error);
+    }
+  }
+
+  onSuccess(token: any) {
+    let estimateForm = this.$refs.estimateForm as HTMLFormElement;
+    estimateForm.submit();
+  }
+
+  onExpired() {
+    console.log("Session Expired");
   }
 }
 </script>

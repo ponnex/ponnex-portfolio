@@ -1,5 +1,6 @@
 {
 	"baseUrl": "https://ponnex.dev/",
 	"thankYouPageUrl": "https://ponnex.dev/thankyou",
-	"emailMask": "22d9503c1971de72828047b41f9a6cc3"
+	"emailMask": "22d9503c1971de72828047b41f9a6cc3",
+	"siteKey": "6Les9asZAAAAANDtLTCD5St3zAZKKoqHqSnF9W33"
 }

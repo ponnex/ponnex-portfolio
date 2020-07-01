@@ -48,7 +48,17 @@ const config: Configuration = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/recaptcha'
   ],
+  /**
+   * Recaptcha Options
+   */
+  recaptcha: {
+    hideBadge: false,
+    siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    version: 2,
+    size: 'invisible'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
