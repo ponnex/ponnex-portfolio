@@ -11,18 +11,17 @@
             class="section-description"
           >Sed ut perspiciatis unde commis iste natus error sit voluptatem accussantium.</p>
         </div>
-        <a href="mailto:ponnex@gmail.com" class="contact-container">
-          <span class="contact-email">ponnex@gmail.com</span>
+        <a href="mailto:hello@ponnex.dev" class="contact-container">
+          <span class="contact-email">hello@ponnex.dev</span>
           <span class="icon ico-email"></span>
         </a>
       </div>
       <div class="footer__section section-2">
         <form
-          name="contact"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          action="/thankyou"
+          target="_blank"
+          :action="`https://formsubmit.co/${apiDefaults.emailMask}`"
           method="POST"
+          enctype="multipart/form-data"
         >
           <div class="section-title">
             <span>Estimate your project?</span>
@@ -43,10 +42,18 @@
             </button>
             <div class="upload-wrapper">
               <span class="icon ico-attachment"></span>
-              <!-- <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" :value="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`">
-              <input type="hidden" name="_subject" value="Web Portfolio: New submission!">
-              <input type="hidden" name="_autoresponse" value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!">-->
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                :value="`${apiDefaults.thankYouPageUrl}?theme=${currentTheme}`"
+              />
+              <input type="hidden" name="_subject" value="Web Portfolio: New submission!" />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="I've received your submission from by web portfolio, I'll get back to you asap, thank you!"
+              />
               <input
                 type="file"
                 name="attachment"
@@ -54,7 +61,6 @@
               />
             </div>
           </div>
-          <div data-netlify-recaptcha="true"></div>
         </form>
       </div>
     </div>
