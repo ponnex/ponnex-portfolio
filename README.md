@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c3677d1-22c9-4b25-b5d6-87da083ff0b6/deploy-status)](https://app.netlify.com/sites/ponnex-portfolio/deploys)
+
 # ponnex-portfolio
 
 > Emmanuel Francis Ramos Jr. Portfolio
