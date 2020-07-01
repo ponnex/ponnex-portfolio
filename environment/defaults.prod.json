@@ -1,5 +1,5 @@
 {
 	"baseUrl": "https://ponnex.dev/",
-	"thankYouPageUrl": "https://ponnex.dev/thankyou",
+	"thankYouPagePath": "/thankyou",
 	"emailMask": "30a1376769bd7d9346f48e5172c6405c"
 }

@@ -1,5 +1,5 @@
 {
 	"baseUrl": "http://localhost:3000",
-	"thankYouPageUrl": "http://localhost:3000/thankyou",
+	"thankYouPagePath": "/thankyou",
 	"emailMask": "30a1376769bd7d9346f48e5172c6405c"
 }
