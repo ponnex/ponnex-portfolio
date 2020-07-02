@@ -1,6 +1,7 @@
 //shortcuts
 $bg: 'bg';
 $text: 'text';
+$text-secondary: 'text-secondary';
 $nav-text: 'nav-text';
 $nav-selector-color: 'nav-selector-color';
 $article-content-color: 'article-content-color';
@@ -38,7 +39,8 @@ $themes: (
     footer-salutation-text-2: $footer--salutation-text-2-dark,
     social-icons-color: brightness(1),
     wip-bg: $wip--bg-dark,
-    icon-wip: $icon--wip-dark
+    icon-wip: $icon--wip-dark,
+    text-secondary: $text-secondary--dark
   ),
   light: (
     bg: $bg--light,
@@ -58,7 +60,8 @@ $themes: (
     footer-salutation-text-2: $footer--salutation-text-2-light,
     social-icons-color: brightness(0.2),
     wip-bg: $wip--bg-light,
-    icon-wip: $icon--wip-light
+    icon-wip: $icon--wip-light,
+    text-secondary: $text-secondary--light
   )
 );
 

@@ -1,5 +1,6 @@
 <template>
   <div class="portfolio">
+		<landing-template />
     <wip-component />
   </div>
 </template>
@@ -7,10 +8,12 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import WipComponent from '@/components/wip/wip.vue';
+import LandingTemplate from '@/components/template/landing/landing.vue';
 
 @Component({
 	components: {
-		WipComponent
+		WipComponent,
+		LandingTemplate
 	}
 })
 export default class IndexPage extends Vue {

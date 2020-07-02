@@ -1,0 +1,128 @@
+.landing {
+	&__container {
+		max-width: 1600px;
+    margin-left: auto;
+		margin-right: auto;
+		padding: 75px 120px 65px;
+		background-image: url('~assets/images/svg/ponnex-avatar.svg');
+		background-size: contain;
+    background-position: center;
+		background-repeat: no-repeat;
+
+		@media (max-width: $screen-lg-max) {
+			background-position: right;
+		}
+
+		@media (max-width: $screen-lg-min) {
+			background-position: 300%;
+		}
+
+    @media (max-width: $screen-md-max) {
+      padding: $spacer--default $spacer--large $spacer--large;
+    }
+
+    @media (max-width: $screen-sm-max) {
+			background: none;
+      padding: $spacer--medium $spacer--medium;
+    }
+	}
+	&__information {
+		display: flex;
+		@media (max-width: $screen-lg-max) {
+			display: block;
+		}
+	}
+	&__section {
+		width: 100%;
+		&.section-1 {
+			span {
+				display: block;
+				font-family: 'CarmenSans-Bold';
+				font-size: 72px;
+				line-height: 75px;
+				@include themed() {
+					color: t($text);
+				}
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 50px;
+					line-height: 52px;
+				}
+			}
+
+			span:last-of-type:after {
+				content: ' ';
+				display: block;
+				height: 8px;
+				width: 60px;
+				margin-top: 32px;
+				background-color: $texas-rose;
+
+				@media (max-width: $screen-sm-max) {
+					margin-top: 5px;
+				}
+			}
+
+			.social-icons {
+				margin-top: 112px;
+				@media (max-width: $screen-sm-max) {
+					margin-top: 50px;
+				}
+				.ico-linkedin {
+					padding: 0 25px;
+				}
+				@include themed() {
+					filter: t($social-icons-color);
+				}
+			}
+		}
+		&.section-2 {
+			* {
+				display: block;
+			}
+			@media (max-width: $screen-lg-max) {
+				margin-top: 50px;
+				* {
+					margin-top: 18px;
+					line-height: 32px;
+				}
+			}
+			@media (min-width: $screen-xl-min) {
+				position: absolute;
+				* {
+					padding: 10px 15px;
+				}
+			}
+
+			.title {
+				font-family: 'Menlo-Bold';
+				font-size: 16px;
+				color: $waterloo;
+			}
+
+			.info-1 {
+				font-family: 'CarmenSans-SemiBold';
+				font-size: 32px;
+				@include themed() {
+					color: t($text);
+				}
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 25px;
+				}
+			}
+
+			.info-2 {
+				font-family: 'CarmenSans-Regular';
+				font-size: 17px;
+				@include themed() {
+					color: t($text-secondary);
+				}
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

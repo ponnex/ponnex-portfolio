@@ -63,6 +63,10 @@
     width: auto;
 		float: right;
 
+		@media (min-width: $screen-md-min) {
+			margin-right: -6.042vw;
+		}
+
     .nav {
       list-style-type: none;
       padding: 0;

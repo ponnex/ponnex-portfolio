@@ -45,6 +45,7 @@
             <div class="upload-wrapper">
               <span class="icon ico-attachment"></span>
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <input
                 type="hidden"
                 name="_next"
