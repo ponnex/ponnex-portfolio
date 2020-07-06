@@ -13,8 +13,8 @@
 			</div>
 			<div class="landing__section section-2">
 				<span class="title">- Introduction</span>
-				<span class="info-1">Frontend and Mobile Developer, based in Philippines.</span>
-				<span class="info-2">A software engineer passionate about solving problems through technology</span>
+				<span class="info-1">Advanced Frontend and Mobile Developer.</span>
+				<span class="info-2">I turn ideas into usable and optimized web and mobile apps.</span>
 			</div>
 		</div>
 	</div>

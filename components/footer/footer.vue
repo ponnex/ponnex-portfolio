@@ -69,9 +69,9 @@
       </div>
     </div>
     <div class="footer__social">
-      <a href="https://floppy-bird-pwa.web.app/" target="_blank" class="logo icon ico-hero"></a>
+      <n-link tag="a" to="/" class="logo icon ico-hero"></n-link>
       <div class="salutation">
-        <span>&lt;/&gt;</span>
+        <a href="https://floppy-bird-pwa.web.app/" target="_blank" class="easegg"><span>&lt;/&gt;</span></a>
         <span>with &#x1f496; by Emmanuel Francis Ramos Jr. © 2020</span>
       </div>
       <div class="social-icons">
