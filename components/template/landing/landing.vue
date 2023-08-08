@@ -14,7 +14,7 @@
 			<div class="landing__section section-2">
 				<span class="title">- Introduction</span>
 				<span class="info-1">Advanced Front-end Developer.</span>
-				<span class="info-2">Turning ideas into usable and optimized web applications.</span>
+				<span class="info-2">Making cool web apps from awesome ideas!</span>
 			</div>
 		</div>
 	</div>

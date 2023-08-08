@@ -3,7 +3,7 @@
     <div class="footer__information">
       <div class="footer__section section-1">
         <div class="section-title">
-          <span>Take a Coffee</span>
+          <span>Take a Coffee &amp;</span>
           <span>Chat with me.</span>
         </div>
         <div>
