@@ -21,7 +21,7 @@ export default class Default extends Vue {
 	 * Get current theme
 	 */
 	get currentTheme() {
-		return this.$route.query.theme ? this.$route.query.theme : 'default';
+		return this.$route.query.theme ? this.$route.query.theme : 'light';
 	}
 }
 </script>

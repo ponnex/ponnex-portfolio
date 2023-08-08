@@ -33,7 +33,7 @@ export default class Default extends Vue {
   /**
 	 * The current theme
 	 */
-  theme: string = 'default';
+  theme: string = 'light';
 
   /**
    * Update the current theme

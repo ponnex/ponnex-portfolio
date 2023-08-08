@@ -2,7 +2,7 @@
 
 # ponnex-portfolio
 
-> Emmanuel Francis Ramos Jr. Portfolio
+> Emmanuel Francis Ramos Portfolio
 
 ## Build Setup
 

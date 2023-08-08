@@ -3,13 +3,13 @@
     <div class="footer__information">
       <div class="footer__section section-1">
         <div class="section-title">
-          <span>Got a project?</span>
-          <span>Let's talk.</span>
+          <span>Take a Coffee</span>
+          <span>Chat with me.</span>
         </div>
         <div>
           <p
             class="section-description"
-          >Sed ut perspiciatis unde commis iste natus error sit voluptatem accussantium.</p>
+          >If you have a good opportunity that matches my skills then don't hesitate to contact me.</p>
         </div>
         <a href="mailto:hello@ponnex.dev" class="contact-container">
           <span class="contact-email">hello@ponnex.dev</span>
@@ -26,8 +26,8 @@
           @submit.prevent="onSubmit"
         >
           <div class="section-title">
-            <span>Estimate your project?</span>
-            <span>Let me know here.</span>
+            <span>Got a project?</span>
+            <span>Let's talk.</span>
           </div>
           <div>
             <span>What's your name?</span>
@@ -72,12 +72,12 @@
       <n-link tag="a" to="/" class="logo icon ico-hero"></n-link>
       <div class="salutation">
         <a href="https://floppy-bird-pwa.web.app/" target="_blank" class="easegg"><span>&lt;/&gt;</span></a>
-        <span>with &#x1f496; by Emmanuel Francis Ramos Jr. © 2020</span>
+        <span>with &#x1f496; by Emmanuel Francis Ramos © 2023</span>
       </div>
       <div class="social-icons">
-        <a href="https://www.instagram.com/ponnexfpv" target="_blank" class="icon ico-instagram"></a>
         <a href="https://www.linkedin.com/in/ponnex/" target="_blank" class="icon ico-linkedin"></a>
         <a href="https://github.com/ponnex/" target="_blank" class="icon ico-github"></a>
+        <a href="https://www.instagram.com/ponnexfpv" target="_blank" class="icon ico-instagram"></a>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@ export default class FooterComponent extends Vue {
    * Get current theme
    */
   get currentTheme() {
-    return "default";
+    return "light";
   }
 
   onError(error: any) {

@@ -20,7 +20,7 @@ export default class IndexPage extends Vue {
   /**
 	 * The current theme
 	 */
-	theme: string = 'default';
+	theme: string = 'light';
 
 	/**
 	 * Emit current theme to parent component.

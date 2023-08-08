@@ -4,10 +4,6 @@
     margin-left: auto;
 		margin-right: auto;
 		padding: 75px 120px 65px;
-		background-image: url('~assets/images/svg/ponnex-avatar.svg');
-		background-size: contain;
-    background-position: center;
-		background-repeat: no-repeat;
 
 		@media (max-width: $screen-lg-max) {
 			background-position: right;
@@ -64,12 +60,11 @@
 			}
 
 			.social-icons {
+				display: flex;
+				gap: 25px;
 				margin-top: 112px;
 				@media (max-width: $screen-sm-max) {
 					margin-top: 50px;
-				}
-				.ico-linkedin {
-					padding: 0 25px;
 				}
 				@include themed() {
 					filter: t($social-icons-color);

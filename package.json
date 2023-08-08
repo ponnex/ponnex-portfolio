@@ -1,8 +1,8 @@
 {
   "name": "ponnex-portfolio",
   "version": "1.0.0",
-  "description": "Emmanuel Francis Ramos Jr. Portfolio",
-  "author": "Emmanuel Francis Ramos Jr.",
+  "description": "Emmanuel Francis Ramos Portfolio",
+  "author": "Emmanuel Francis Ramos",
   "private": true,
   "scripts": {
     "prebuild": "npm run rmrf",

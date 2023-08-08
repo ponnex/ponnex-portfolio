@@ -18,7 +18,7 @@
             <span
               role="button"
               class="icon"
-              :class="[{'ico-sun': theme == 'default'}, {'ico-moon': theme == 'light'}]"
+              :class="[{'ico-sun': theme === 'default'}, {'ico-moon': theme === 'light'}]"
             ></span>
           </li>
         </ul>
@@ -74,7 +74,7 @@ export default class NavBarComponent extends Vue {
   /**
    * The current theme
    */
-  theme: string = 'default';
+  theme: string = 'light';
   /**
    * Nav drawer state
    */

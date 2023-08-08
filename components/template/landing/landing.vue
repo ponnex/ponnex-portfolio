@@ -4,17 +4,17 @@
 			<div class="landing__section section-1">
 				<span>Emmanuel</span>
 				<span>Francis</span>
-				<span>Ramos Jr.</span>
+				<span>Ramos</span>
 				<div class="social-icons">
-					<a href="https://www.instagram.com/ponnexfpv" target="_blank" class="icon ico-instagram"></a>
 					<a href="https://www.linkedin.com/in/ponnex/" target="_blank" class="icon ico-linkedin"></a>
 					<a href="https://github.com/ponnex/" target="_blank" class="icon ico-github"></a>
+					<a href="https://www.instagram.com/ponnexfpv" target="_blank" class="icon ico-instagram"></a>
 				</div>
 			</div>
 			<div class="landing__section section-2">
 				<span class="title">- Introduction</span>
-				<span class="info-1">Advanced Frontend and Mobile Developer.</span>
-				<span class="info-2">I turn ideas into usable and optimized web and mobile apps.</span>
+				<span class="info-1">Advanced Front-end Developer.</span>
+				<span class="info-2">Turning ideas into usable and optimized web applications.</span>
 			</div>
 		</div>
 	</div>
