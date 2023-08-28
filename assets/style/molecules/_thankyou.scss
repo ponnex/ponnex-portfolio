@@ -31,8 +31,8 @@
 	&__email {
 		font-family: 'CarmenSans-SemiBold';
 		font-size: 24px;
-		color: $texas-rose;
-		border-bottom: solid $texas-rose 2px;
+		color: $yellow-sea;
+		border-bottom: solid $yellow-sea 2px;
 		padding-bottom: 2px;
 		
 		@media (max-width: $screen-sm-max) {
@@ -53,6 +53,11 @@
 				width: 14px;
 				margin: 0 8px;
 			}
+		}
+
+		.icon {
+			height: 24px;
+			width: 24px;
 		}
 	}
 }

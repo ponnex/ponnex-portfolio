@@ -14,13 +14,7 @@
     class="navbar-collapse collapse" :class="{'in': !isCollapsed}">
       <div class="link-container">
         <ul class="header__utility nav navbar-nav navbar-right">
-          <li role="presentation" class="theme-toggle header-link" @click="changeTheme()">
-            <span
-              role="button"
-              class="icon"
-              :class="[{'ico-sun': theme === 'default'}, {'ico-moon': theme === 'light'}]"
-            ></span>
-          </li>
+         
         </ul>
         <div class="header__links">
           <ul class="nav navbar-nav navbar-right">
@@ -35,6 +29,15 @@
             </n-link>
             <n-link
               tag="li"
+              to="/projects"
+              role="presentation"
+              class="header-link"
+              :class="{'active': $route.path === '/projects'}"
+            >
+              <a href="#" @click="collapsed()">Projects</a>
+            </n-link>
+            <n-link
+              tag="li"
               to="/resume"
               role="presentation"
               class="header-link"
@@ -43,15 +46,13 @@
             >
               <a href="#" @click="collapsed()">Resume</a>
             </n-link>
-            <n-link
-              tag="li"
-              to="/blog"
-              role="presentation"
-              class="header-link"
-              :class="{'active': $route.path === '/blog'}"
-            >
-              <a href="#" @click="collapsed()">Blog</a>
-            </n-link>
+            <li role="presentation" class="theme-toggle header-link" @click="changeTheme()">
+              <span
+                role="button"
+                class="icon"
+                :class="[{'ico-sun': theme === 'default'}, {'ico-moon': theme === 'light'}]"
+              ></span>
+            </li>
           </ul>
         </div>
       </div>

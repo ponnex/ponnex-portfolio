@@ -32,6 +32,7 @@
 		}
 
 		.easegg {
+			text-decoration: none;
 			animation: cursorAnimate 0.25s infinite;
 		}
 
@@ -51,11 +52,14 @@
 		}
 		
 		.salutation {
+			display: flex;
+			gap: 8px;
+			justify-content: center;
 			margin-top: 15px;
-			font-size: 14px;
+			font-size: 16px;
 			span:nth-child(1) {
 				font-family: 'CarmenSans-Heavy';
-				color: $texas-rose;
+				color: $yellow-sea;
 			}
 			span:nth-child(2) {
 				@include themed() {
@@ -70,6 +74,11 @@
 				@include themed() {
 					filter: t($social-icons-color);
 				}
+			}
+
+			.icon {
+				height: 24px;
+				width: 24px;
 			}
 		}
 	}
@@ -95,12 +104,12 @@
 			.contact-container {
 				font-family: 'CarmenSans-Semibold';
 				font-size: 18px;
-				color: $texas-rose;
+				color: $yellow-sea;
 				text-decoration: none;
 
 				.contact-email {
-					border-bottom: solid #ffc34d 2px;
-    			padding-bottom: 2px;
+					border-bottom: solid $yellow-sea 2px;
+    				padding-bottom: 2px;
 				}
 
 				.ico-email {
@@ -113,52 +122,69 @@
 			}
 		}
 
-		&.section-2 > form > * {
-			margin-bottom: 40px;
-		}
-
 		&.section-2 {
 			@media (max-width: $screen-sm-max) {
 				margin-top: 90px;
 			}
-			.section-title {
-				font-family: 'CarmenSans-Bold';
-			}
-			.text-input {
-				display: block;
-				width: 100%;
-				margin-top: 18px;
-				background-color: transparent;
-    		border-bottom: solid $mid-gray 1px;
-			}
-			.contact-submit-btn {
-				float: right;
-			}
-			.ico-arrow {
-				margin: 0 10px;
-				padding-bottom: 8px;
-				cursor: pointer;
-				border-bottom: solid #ffc34d 2px;
-			}
-			.upload-wrapper {
-				position: relative;
-				overflow: hidden;
-				float: right;
-				margin: 0 15px;
-				padding-top: 4px;
+			.form {
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
 
-				.ico-attachment {
-					cursor: pointer;
+				.section-title {
+					font-family: 'CarmenSans-Bold';
 				}
-				
-				input[type=file] {
-					position: absolute;
-					width: 17px;
-					height: 18px;
-					left: 0;
-					font-size: 0;
-					opacity: 0;
+
+				.text-input {
+					display: block;
+					width: 100%;
+					margin-top: 18px;
+					background-color: transparent;
+					border-bottom: solid $mid-gray 1px;
+				}
+
+				.contact-submit-btn {
+					width: min-content;
+					padding: 8px 24px;
+					background-color: $yellow-sea;
+					border-radius: 8px;
+					color: $mine-shaft;
+					align-self: flex-end;
+				}
+
+				.ico-arrow {
+					margin: 0 10px;
+					padding-bottom: 8px;
 					cursor: pointer;
+					border-bottom: solid $yellow-sea 2px;
+				}
+
+				.upload-wrapper {
+					.ico-attachment {
+						height: 22px;
+    					width: 21px;
+						cursor: pointer;
+					}
+					
+					input[type=file] {
+						position: absolute;
+						width: 17px;
+						height: 18px;
+						font-size: 0;
+						opacity: 0;
+					}
+				}
+
+				.attachment {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				textarea {
+					border: solid $manatee 1px;
+					border-radius: 4px;
+					min-height: 200px;
 				}
 			}
 		}

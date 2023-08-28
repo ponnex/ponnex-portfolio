@@ -13,7 +13,7 @@ import WipComponent from '@/components/wip/wip.vue';
     WipComponent
   }
 })
-export default class BlogPage extends Vue {
+export default class ProjectsPage extends Vue {
 
 }
 </script>

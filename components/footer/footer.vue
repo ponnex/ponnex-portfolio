@@ -24,6 +24,7 @@
           method="POST"
           enctype="multipart/form-data"
           @submit.prevent="onSubmit"
+          class="form"
         >
           <div class="section-title">
             <span>Got a project?</span>
@@ -39,9 +40,6 @@
           </div>
           <div class="attachment">
             <span>Tell me about your project</span>
-            <button type="submit" class="contact-submit-btn">
-              <span class="icon ico-arrow"></span>
-            </button>
             <div class="upload-wrapper">
               <span class="icon ico-attachment"></span>
               <input type="hidden" name="_captcha" value="false" />
@@ -64,6 +62,8 @@
               />
             </div>
           </div>
+          <textarea required></textarea>
+          <button type="submit" class="contact-submit-btn">Submit</button>
           <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" />
         </form>
       </div>
@@ -72,7 +72,7 @@
       <n-link tag="a" to="/" class="logo icon ico-hero"></n-link>
       <div class="salutation">
         <a href="https://floppy-bird-pwa.web.app/" target="_blank" class="easegg"><span>&lt;/&gt;</span></a>
-        <span>with &#x1f496; by Emmanuel Francis Ramos © 2023</span>
+        <span>with &#x1f496; by Emmanuel Francis Ramos 2023</span>
       </div>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/ponnex/" target="_blank" class="icon ico-linkedin"></a>

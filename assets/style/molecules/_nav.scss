@@ -125,7 +125,7 @@
 	}
 
 	.theme-toggle > span {
-		margin: 10px 0 0 ($spacer--default + 5px);
+		margin: 15px 0 0 ($spacer--default + 5px);
 	}
 
 	.navbar-collapse.collapse {
@@ -159,12 +159,21 @@
 		.navbar-nav > li.active > a::before {
 			content: ' ';
 			display: block;
-			height: 6px;
-			width: 6px;
-			border-radius: 50%;
+			height: 2px;
+			width: 60px;
 			position: absolute;
+			margin-top: 16px;
 			bottom: 0;
 			left: 50%;
+
+			// content: ' ';
+			// display: block;
+			// height: 6px;
+			// width: 6px;
+			// border-radius: 50%;
+			// position: absolute;
+			// bottom: 0;
+			// left: 50%;
 			transform: translateX(-50%);
 			transition: width .3s ease-in-out;
 			@include themed() {
