@@ -31,8 +31,8 @@ import FooterComponent from '@/components/footer/footer.vue';
 })
 export default class Default extends Vue {
   /**
-	 * The current theme
-	 */
+   * The current theme
+   */
   theme: string = 'light';
 
   /**

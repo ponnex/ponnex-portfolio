@@ -1,62 +1,71 @@
 .ico-hero {
-	height: $icon-hero;
-	width: $icon-hero;
-	background: url("~assets/images/svg/avatar.svg") no-repeat center center transparent;
+  height: $icon-hero;
+  width: $icon-hero;
+  background: url('~assets/images/svg/avatar.svg') no-repeat center center
+    transparent;
 }
 
 .ico-sun {
-	height: $icon-theme-switcher;
-	width: $icon-theme-switcher;
-	background: url("~assets/images/svg/sun.svg") no-repeat center center transparent;
+  height: $icon-theme-switcher;
+  width: $icon-theme-switcher;
+  background: url('~assets/images/svg/sun.svg') no-repeat center center
+    transparent;
 }
 
 .ico-moon {
-	height: $icon-theme-switcher;
-	width: $icon-theme-switcher;
-	background: url("~assets/images/svg/moon.svg") no-repeat center center transparent;
+  height: $icon-theme-switcher;
+  width: $icon-theme-switcher;
+  background: url('~assets/images/svg/moon.svg') no-repeat center center
+    transparent;
 }
 
 .ico-linkedin {
-	height: $icon-social-media;
-	width: $icon-social-media;
-	background: url("~assets/images/svg/linkedIn.svg") no-repeat center center transparent;
+  height: $icon-social-media;
+  width: $icon-social-media;
+  background: url('~assets/images/svg/linkedIn.svg') no-repeat center center
+    transparent;
 }
 
 .ico-instagram {
-	height: $icon-social-media;
-	width: $icon-social-media;
-	background: url("~assets/images/svg/instagram.svg") no-repeat center center transparent;
+  height: $icon-social-media;
+  width: $icon-social-media;
+  background: url('~assets/images/svg/instagram.svg') no-repeat center center
+    transparent;
 }
 
 .ico-github {
-	height: $icon-social-media;
-	width: $icon-social-media;
-	background: url("~assets/images/svg/github.svg") no-repeat center center transparent;
+  height: $icon-social-media;
+  width: $icon-social-media;
+  background: url('~assets/images/svg/github.svg') no-repeat center center
+    transparent;
 }
 
 .ico-attachment {
-	height: $icon-attachment-height;
-	width: $icon-attachment-width;
-	background: url("~assets/images/svg/clip.svg") no-repeat center center transparent;
+  height: $icon-attachment-height;
+  width: $icon-attachment-width;
+  background: url('~assets/images/svg/clip.svg') no-repeat center center
+    transparent;
 }
 
 .ico-arrow {
-	height: $icon-arrow-height;
-	width: $icon-arrow-width;
-	background: url("~assets/images/svg/arrow.svg") no-repeat center center transparent;
+  height: $icon-arrow-height;
+  width: $icon-arrow-width;
+  background: url('~assets/images/svg/arrow.svg') no-repeat center center
+    transparent;
 }
 
 .ico-email {
-	height: $icon-email-height;
-	width: $icon-email-width;
-	background: url("~assets/images/svg/email.svg") no-repeat center center transparent;
+  height: $icon-email-height;
+  width: $icon-email-width;
+  background: url('~assets/images/svg/email.svg') no-repeat center center
+    transparent;
 }
 
 .icon {
-	display: inline-block;
-	background-size: contain;
+  display: inline-block;
+  background-size: contain;
 }
 
 .icon-btn {
-	background-color: transparent !important;
+  background-color: transparent;
 }

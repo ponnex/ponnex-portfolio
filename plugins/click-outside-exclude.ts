@@ -16,26 +16,26 @@ const directive: DirectiveOptions = {
         exclude: Array<string>;
       }
 
-      let { handler, exclude }: directiveInput = binding.value; 
-      
-			let clickedOnExcludedEl = false;
-			exclude.forEach((refName: string) => {
-				if (!clickedOnExcludedEl) {
+      let { handler, exclude }: directiveInput = binding.value;
+
+      let clickedOnExcludedEl = false;
+      exclude.forEach((refName: string) => {
+        if (!clickedOnExcludedEl) {
           const excludedEl = vnode.context!.$refs[refName] as HTMLElement;
-          if (excludedEl) clickedOnExcludedEl = excludedEl.contains(e.target)
-				}
+          if (excludedEl) clickedOnExcludedEl = excludedEl.contains(e.target);
+        }
       });
       if (!el.contains(e.target) && !clickedOnExcludedEl) {
-        vnode.context![handler]()
+        vnode.context![handler]();
       }
-    }
-    document.addEventListener('click', handleOutsideClick)
-    document.addEventListener('touchstart', handleOutsideClick)
+    };
+    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('touchstart', handleOutsideClick);
   },
 
   unbind() {
-    document.removeEventListener('click', handleOutsideClick)
-    document.removeEventListener('touchstart', handleOutsideClick)
+    document.removeEventListener('click', handleOutsideClick);
+    document.removeEventListener('touchstart', handleOutsideClick);
   }
 };
 

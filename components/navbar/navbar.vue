@@ -1,64 +1,20 @@
 <template>
-  <div class="container">
-    <div class="navbar-header">
-      <button ref="button" type="button" class="navbar-toggle" @click="toggleTheme('toggle')">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div v-click-outside-exclude="{
-      exclude: ['button'],
-      handler: 'collapsed'  
-    }" 
-    class="navbar-collapse collapse" :class="{'in': !isCollapsed}">
-      <div class="link-container">
-        <ul class="header__utility nav navbar-nav navbar-right">
-         
-        </ul>
-        <div class="header__links">
-          <ul class="nav navbar-nav navbar-right">
-            <n-link
-              tag="li"
-              to="/"
-              role="presentation"
-              class="header-link"
-              :class="{'active': $route.path === '/'}"
-            >
-              <a href="#" @click="collapsed()">Portfolio</a>
-            </n-link>
-            <n-link
-              tag="li"
-              to="/projects"
-              role="presentation"
-              class="header-link"
-              :class="{'active': $route.path === '/projects'}"
-            >
-              <a href="#" @click="collapsed()">Projects</a>
-            </n-link>
-            <n-link
-              tag="li"
-              to="/resume"
-              role="presentation"
-              class="header-link"
-              :class="{'active': $route.path === '/resume'}"
-              
-            >
-              <a href="#" @click="collapsed()">Resume</a>
-            </n-link>
-            <li role="presentation" class="theme-toggle header-link" @click="changeTheme()">
-              <span
-                role="button"
-                class="icon"
-                :class="[{'ico-sun': theme === 'default'}, {'ico-moon': theme === 'light'}]"
-              ></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <n-link tag="a" to="/" class="logo icon ico-hero" />
-  </div>
+  <ul class="header__links">
+    <n-link tag="li" to="/" role="presentation" class="header-link" :class="{ 'active': $route.path === '/' }">
+      <a href="#" @click="collapsed()">Portfolio</a>
+    </n-link>
+    <n-link tag="li" to="/projects" role="presentation" class="header-link"
+      :class="{ 'active': $route.path === '/projects' }">
+      <a href="#" @click="collapsed()">Projects</a>
+    </n-link>
+    <n-link tag="li" to="/resume" role="presentation" class="header-link"
+      :class="{ 'active': $route.path === '/resume' }">
+      <a href="#" @click="collapsed()">Resume</a>
+    </n-link>
+    <a role="presentation" class="theme-toggle header-link icon"
+      :class="[{ 'ico-sun': theme === 'default' }, { 'ico-moon': theme === 'light' }]" @click="changeTheme()">
+    </a>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -71,7 +27,7 @@ declare var _: any;
     clickOutsideExclude
   }
 })
-export default class NavBarComponent extends Vue {
+export default class NavBar extends Vue {
   /**
    * The current theme
    */
@@ -86,7 +42,7 @@ export default class NavBarComponent extends Vue {
    *
    * @param theme The current selected theme.
    */
-  changeTheme(theme: string) {
+  changeTheme() {
     this.theme = this.theme != 'default' ? 'default' : 'light';
     this.$emit('themeChanged', this.theme);
   }
@@ -96,27 +52,6 @@ export default class NavBarComponent extends Vue {
    */
   toggleTheme() {
     this.isCollapsed = !this.isCollapsed;
-	}
-	
-	/**
-   * Vue mounted lifecycle hook
-   */
-  mounted() {
-    this.animationLoop();
-  }
-
-	/**
-	 * Function loop for listening scroll position Y using requestAnimationFrame
-	 */
-  animationLoop() {
-    let { browser, isTablet, isMobile } = this.$util.browserDetails();
-    let navbarTagEl = window.document.querySelector('.navbar') as HTMLElement;
-    if (window.scrollY > (isMobile ? 1 : 55)) {
-      if (navbarTagEl) navbarTagEl.classList.add('is-sticky');
-    } else {
-      if (navbarTagEl) navbarTagEl.classList.remove('is-sticky');
-    }
-    requestAnimationFrame(this.animationLoop);
   }
 
   /**

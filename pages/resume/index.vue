@@ -60,11 +60,11 @@ export default class ResumePage extends Vue {
    */
   resizePdf() {
     this.$nextTick(() => {
-      let { browser, isTablet, isMobile } = this.$util.browserDetails();
+      let { isMobile } = this.$util.browserDetails();
       let resumeEl = document.querySelector('.resume') as HTMLElement;
       let pagePadding = parseInt(window.getComputedStyle(resumeEl, null).getPropertyValue('padding-left').match(/\d+/g)![0]) * 2;
       let resumeWidth = (this.$screen.width - pagePadding) > 1600 ? 1600 : (this.$screen.width - pagePadding);
-      this.scale = isMobile ? (resumeWidth / this.pdfWidth) : 'page-width'; 
+      this.scale = isMobile ? (resumeWidth / this.pdfWidth) : 'page-width';
     })
   }
 }

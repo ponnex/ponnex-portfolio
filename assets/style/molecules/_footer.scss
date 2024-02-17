@@ -1,10 +1,47 @@
 .footer {
   &__container {
-		font-family: 'CarmenSans-Medium';
+    font-family: 'CarmenSans-Medium';
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-		padding: 75px 120px 65px;
+    text-align: center;
+    padding: 54px;
+
+    .easegg {
+      text-decoration: none;
+      animation: cursorAnimate 0.25s infinite;
+    }
+
+    @keyframes cursorAnimate {
+      0% {
+        cursor: url('~assets/images/flappy0.png'), pointer;
+      }
+      33% {
+        cursor: url('~assets/images/flappy1.png'), pointer;
+      }
+      66% {
+        cursor: url('~assets/images/flappy2.png'), pointer;
+      }
+      100% {
+        cursor: url('~assets/images/flappy3.png'), pointer;
+      }
+    }
+
+    .salutation {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 15px;
+      font-size: 14px;
+      span:nth-child(1) {
+        font-family: 'CarmenSans-Heavy';
+        color: $yellow-sea;
+      }
+      span:nth-child(2) {
+        @include themed() {
+          color: t($footer-salutation-text-2);
+        }
+      }
+    }
+
     @media (max-width: $screen-md-max) {
       padding: $spacer--default $spacer--large $spacer--large;
     }
@@ -13,207 +50,4 @@
       padding: $spacer--medium $spacer--medium;
     }
   }
-  &__information {
-		display: flex;
-		@media (max-width: $screen-sm-max) {
-			display: block;
-		}
-  }
-  &__social {
-		margin-top: 200px;
-		text-align: center;
-
-		@media (max-width: $screen-md-max) {
-			margin-top: 90px;
-			.logo {
-				height: 32px;
-				width: 32px;
-			}
-		}
-
-		.easegg {
-			text-decoration: none;
-			animation: cursorAnimate 0.25s infinite;
-		}
-
-		@keyframes cursorAnimate {
-			0%{ 
-				cursor: url("~assets/images/flappy0.png"), pointer;
-			}
-			33%{ 
-				cursor: url("~assets/images/flappy1.png"), pointer;
-			}
-			66%{ 
-				cursor: url("~assets/images/flappy2.png"), pointer;
-			}
-			100%{ 
-				cursor: url("~assets/images/flappy3.png"), pointer;
-			}
-		}
-		
-		.salutation {
-			display: flex;
-			gap: 8px;
-			justify-content: center;
-			margin-top: 15px;
-			font-size: 16px;
-			span:nth-child(1) {
-				font-family: 'CarmenSans-Heavy';
-				color: $yellow-sea;
-			}
-			span:nth-child(2) {
-				@include themed() {
-					color: t($footer-salutation-text-2);
-				}
-			}
-		}
-		.social-icons {
-			margin-top: 25px;
-			a {
-				margin: 0 10px;
-				@include themed() {
-					filter: t($social-icons-color);
-				}
-			}
-
-			.icon {
-				height: 24px;
-				width: 24px;
-			}
-		}
-	}
-	&__section {
-		@media (min-width: $screen-md-min) {
-			width: 50%;
-		}
-
-		&.section-1 > * {
-			margin-bottom: 60px;
-			@media (max-width: $screen-sm-max) {
-				margin-bottom: 20px;
-			}
-		}
-
-		&.section-1 {
-			@media (max-width: $screen-sm-max) {
-				text-align: center;
-				.section-title > * {
-					display: inline;
-				}
-			}
-			.contact-container {
-				font-family: 'CarmenSans-Semibold';
-				font-size: 18px;
-				color: $yellow-sea;
-				text-decoration: none;
-
-				.contact-email {
-					border-bottom: solid $yellow-sea 2px;
-    				padding-bottom: 2px;
-				}
-
-				.ico-email {
-					margin-left: 20px;
-					vertical-align: middle;
-					@include themed() {
-						filter: t($social-icons-color);
-					}
-				}
-			}
-		}
-
-		&.section-2 {
-			@media (max-width: $screen-sm-max) {
-				margin-top: 90px;
-			}
-			.form {
-				display: flex;
-				flex-direction: column;
-				gap: 40px;
-
-				.section-title {
-					font-family: 'CarmenSans-Bold';
-				}
-
-				.text-input {
-					display: block;
-					width: 100%;
-					margin-top: 18px;
-					background-color: transparent;
-					border-bottom: solid $mid-gray 1px;
-				}
-
-				.contact-submit-btn {
-					width: min-content;
-					padding: 8px 24px;
-					background-color: $yellow-sea;
-					border-radius: 8px;
-					color: $mine-shaft;
-					align-self: flex-end;
-				}
-
-				.ico-arrow {
-					margin: 0 10px;
-					padding-bottom: 8px;
-					cursor: pointer;
-					border-bottom: solid $yellow-sea 2px;
-				}
-
-				.upload-wrapper {
-					.ico-attachment {
-						height: 22px;
-    					width: 21px;
-						cursor: pointer;
-					}
-					
-					input[type=file] {
-						position: absolute;
-						width: 17px;
-						height: 18px;
-						font-size: 0;
-						opacity: 0;
-					}
-				}
-
-				.attachment {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-				}
-
-				textarea {
-					border: solid $manatee 1px;
-					border-radius: 4px;
-					min-height: 200px;
-				}
-			}
-		}
-
-		.section-title {
-			line-height: initial;
-			@media (max-width: $screen-sm-max) {
-				text-align: center;
-			}
-		}
-
-		.section-title > * {
-			display: block;
-			font-size: 30px;
-			@include themed() {
-				color: t($footer-title);
-			}
-			@media (max-width: $screen-sm-max) {
-				font-size: 26px;
-			}
-		}
-		.section-description {
-			@media (min-width: $screen-md-min) {
-				width: 60%;
-			}
-			font-size: 16px;
-			@include themed() {
-				color: t($footer-title-desc)
-			}
-		}
-	}
 }

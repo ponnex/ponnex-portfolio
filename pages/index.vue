@@ -1,8 +1,8 @@
 <template>
-  <div class="portfolio">
+	<div class="portfolio">
 		<landing-template />
-    <wip-component />
-  </div>
+		<wip-component />
+	</div>
 </template>
 
 <script lang="ts">
@@ -17,9 +17,9 @@ import LandingTemplate from '@/components/template/landing/landing.vue';
 	}
 })
 export default class IndexPage extends Vue {
-  /**
-	 * The current theme
-	 */
+	/**
+	   * The current theme
+	   */
 	theme: string = 'light';
 
 	/**

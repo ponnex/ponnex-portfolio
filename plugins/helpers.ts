@@ -3,32 +3,32 @@ import MobileDetect from 'mobile-detect';
 import browser from 'browser-detect';
 
 interface BrowserDetails {
-  isTablet: boolean,
-  isMobile: boolean,
-  browser: string
+  isTablet: boolean;
+  isMobile: boolean;
+  browser: string;
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $util: { 
-      browserDetails(): BrowserDetails
-    }
+    $util: {
+      browserDetails(): BrowserDetails;
+    };
   }
 }
 
 declare module '@nuxt/types' {
   interface NuxtAppOptions {
-    $util: { 
-      browserDetails(): BrowserDetails
-    }
+    $util: {
+      browserDetails(): BrowserDetails;
+    };
   }
 }
 
 declare module 'vuex/types/index' {
   interface Store<S> {
-    $util: { 
-      browserDetails(): BrowserDetails
-    }
+    $util: {
+      browserDetails(): BrowserDetails;
+    };
   }
 }
 
@@ -42,8 +42,8 @@ const helperPlugins: Plugin = (context, inject) => {
         isTablet: !!md.tablet(),
         isMobile: !!md.mobile() && !md.tablet(),
         browser: (md.userAgent() || browserDetails.name!).toLowerCase()
-      }
+      };
     }
   });
-}
-export default helperPlugins
+};
+export default helperPlugins;
