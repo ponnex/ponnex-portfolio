@@ -22,7 +22,7 @@
 import NavBar from '~/components/navbar/navbar.vue'
 import AppFooter from '~/components/footer/footer.vue'
 
-const theme = ref('light')
+const theme = ref('default')
 
 function onThemeChanged(next: string) {
   theme.value = next

@@ -1,18 +1,35 @@
 <template>
-  <ul class="header__links">
-    <li class="header-link" :class="{ active: route.path === '/' }" role="presentation">
-      <NuxtLink to="/">Portfolio</NuxtLink>
-    </li>
-    <li class="header-link" :class="{ active: route.path === '/projects' }" role="presentation">
-      <NuxtLink to="/projects">Projects</NuxtLink>
-    </li>
-    <li class="header-link" :class="{ active: route.path === '/resume' }" role="presentation">
-      <NuxtLink to="/resume">Resume</NuxtLink>
-    </li>
-    <a role="presentation" class="theme-toggle header-link icon"
-      :class="[{ 'ico-sun': theme === 'default' }, { 'ico-moon': theme === 'light' }]" @click="changeTheme()">
-    </a>
-  </ul>
+  <div class="tnav">
+    <div class="tnav__in">
+      <NuxtLink to="/" class="tnav__logo"><span class="c-accent">~/</span>ponnex</NuxtLink>
+      <ul class="tnav__links">
+        <li :class="{ active: route.path === '/' }" role="presentation">
+          <NuxtLink to="/">portfolio</NuxtLink>
+        </li>
+        <li :class="{ active: route.path === '/projects' }" role="presentation">
+          <NuxtLink to="/projects">projects</NuxtLink>
+        </li>
+        <li :class="{ active: route.path === '/resume' }" role="presentation">
+          <NuxtLink to="/resume">resume</NuxtLink>
+        </li>
+        <li class="tnav__status" role="presentation">
+          <span class="tnav__dot"></span>open to work
+        </li>
+        <li role="presentation">
+          <button
+            type="button"
+            class="theme-toggle"
+            :aria-label="`switch to ${theme === 'default' ? 'light' : 'dark'} theme`"
+            @click="changeTheme()"
+          >
+            <span class="theme-toggle__bracket">[</span>
+            <span class="theme-toggle__label">{{ theme === 'default' ? 'light' : 'dark' }}</span>
+            <span class="theme-toggle__bracket">]</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -20,7 +37,7 @@ const route = useRoute()
 
 const emit = defineEmits<{ themeChanged: [theme: string] }>()
 
-const theme = ref('light')
+const theme = ref('default')
 
 function changeTheme() {
   theme.value = theme.value !== 'default' ? 'default' : 'light'

@@ -1,20 +1,32 @@
 <template>
-	<div class="landing__container">
-		<div class="landing__information">
-			<div class="landing__section section-1">
-				<span class="title">FRONTEND DEVELOPER</span>
-				<div class="name">
-					<span>Emmanuel</span>
-					<span>Francis</span>
-					<span>Ramos</span>
+	<section class="hero shell">
+		<div class="hero__tag"><span class="c-accent">$</span> whoami <span class="c-dim">— frontend developer</span></div>
+		<h1 class="hero__name">Emmanuel Francis<br><span class="y">Ramos</span></h1>
+		<div class="hero__flex">
+			<div>
+				<p class="hero__blurb">I build <b>fast, polished web applications</b> for ambitious teams — airlines, banks, e-commerce, crypto and more. Nine industries shipped, and counting.</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href="#contact">get in touch →</a>
+					<NuxtLink class="btn btn--ghost" to="/resume">view resume</NuxtLink>
 				</div>
-				<SocialIcons />
+				<div class="hero__social">
+					<SocialIcons />
+				</div>
 			</div>
-			<div class="landing__section section-2">
-				<span class="info-2">Making awesome web applications for different industries like Airlines, Banks, Automotive, E-commerce, Marketplace, Arts and Museums, Events, Crypto Space and more.</span>
+			<div class="code">
+				<div class="code__bar">
+					<i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i>
+					<span class="fn">developer.ts</span>
+				</div>
+				<pre><span class="k">const</span> <span class="a">dev</span> = {
+  name: <span class="s">"E. F. Ramos"</span>,
+  role: <span class="s">"Frontend Dev"</span>,
+  stack: [<span class="s">"Vue"</span>, <span class="s">"Nuxt"</span>, <span class="s">"React"</span>, <span class="s">"TS"</span>],
+  available: <span class="a">true</span>,
+}</pre>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script setup lang="ts">
