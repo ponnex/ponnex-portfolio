@@ -1,36 +1,30 @@
 {
   "name": "ponnex-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Emmanuel Francis Ramos Portfolio",
   "author": "Emmanuel Francis Ramos",
   "private": true,
+  "type": "module",
   "scripts": {
-    "prebuild": "npm run rmrf",
-    "start": "cross-env NODE_ENV=development HOST=0.0.0.0 nuxt-ts",
-    "build": "npm run prebuild;cross-env NODE_ENV=production nuxt-ts build",
-    "generate": "nuxt-ts generate",
-    "start:prod": "cross-env NODE_ENV=production NODE_STAGING=true nuxt-ts start",
-    "rmrf": "rimraf dist dist_render build"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.0",
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
-    "@nuxtjs/recaptcha": "^0.6.2",
     "browser-detect": "^0.2.28",
-    "lodash": "^4.17.15",
-    "mobile-detect": "^1.4.4",
+    "mobile-detect": "^1.4.5",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.0.0",
-    "nuxt-property-decorator": "^2.7.2",
-    "pdfvuer": "^1.6.1",
-    "vue-screen": "^1.4.3"
+    "nuxt": "^4.4.8",
+    "vue": "^3.5.13",
+    "vue-pdf-embed": "^2.1.5",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
-    "cross-env": "^7.0.2",
-    "node-sass": "^4.14.1",
-    "nuxt-typed-vuex": "^0.1.19",
-    "sass-loader": "^8.0.2"
+    "@vueuse/nuxt": "^14.3.0",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.0",
+    "vue-tsc": "^3.3.5"
   }
 }

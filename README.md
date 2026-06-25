@@ -13,12 +13,12 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# build for production and preview the server
 $ npm run build
-$ npm run start
+$ npm run preview
 
 # generate static project
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Built with [Nuxt 4](https://nuxt.com). For detailed explanation on how things work, check out the [Nuxt docs](https://nuxt.com/docs).
