@@ -2,6 +2,9 @@
   command = "npm run generate"
   publish = ".output/public"
 
+[build.environment]
+  NODE_VERSION = "22"
+
 # SPA fallback: ssr is disabled, so every route must serve index.html
 # and let the client router resolve it.
 [[redirects]]
