@@ -8,10 +8,10 @@
     </ClientOnly>
     <div class="resume__links">
       <a href="ramos_resume.pdf" target="_blank">
-        Download PDF Resume
+        Download in PDF
       </a>
       <a href="https://www.linkedin.com/in/ponnex/" target="_blank">
-        View my LinkedIn Profile
+        View LinkedIn
       </a>
     </div>
   </div>
@@ -22,6 +22,9 @@ import VuePdfEmbed from 'vue-pdf-embed'
 
 const source = '/ramos_resume.pdf'
 const MAX_WIDTH = 1600
+// Mirrors `$maxw` for the `.resume` container in _terminal.scss — the page is
+// centered and capped at this width, so the PDF can never be wider than this.
+const CONTENT_MAX = 1160
 
 const resumeRef = ref<HTMLElement | null>(null)
 const pdfWidth = ref(MAX_WIDTH)
@@ -33,8 +36,12 @@ function resizePdf() {
   if (!el) return
   const styles = window.getComputedStyle(el)
   const padding = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)
-  const available = el.clientWidth - padding
-  pdfWidth.value = Math.min(available > 0 ? available : MAX_WIDTH, MAX_WIDTH)
+  // Measure against the viewport (capped to the container width), NOT
+  // el.clientWidth: the canvas inflates the element, so reading the element's
+  // own width feeds the inflated value back in and the PDF never shrinks.
+  const viewport = document.documentElement.clientWidth
+  const available = Math.min(viewport, CONTENT_MAX) - padding
+  pdfWidth.value = Math.max(0, Math.min(available, MAX_WIDTH))
 }
 
 // Recompute whenever the viewport width changes.

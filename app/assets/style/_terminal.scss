@@ -99,9 +99,12 @@ body {
 
 // section header:  // selected_work  ────────  04 projects
 .sec {
-  padding: 72px 0;
+  // vertical only — horizontal padding comes from .shell. Using the `padding`
+  // shorthand here would reset .shell's side padding to 0 and let content run
+  // edge-to-edge below the max-width breakpoint (mobile/tablet).
+  padding-block: 72px;
   @media (max-width: $screen-sm-max) {
-    padding: 48px 0;
+    padding-block: 48px;
   }
 }
 .sec-head {
@@ -138,10 +141,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     font-family: $mono;
     font-size: 13px;
     @media (max-width: $screen-sm-max) {
-      padding: 0 22px;
+      padding: 0 16px;
+      font-size: 12px;
     }
   }
   &__logo {
@@ -158,6 +163,7 @@ body {
     align-items: center;
     gap: 26px;
     list-style: none;
+    white-space: nowrap; // keep the active "> resume" prefix on one line
     li > a {
       color: var(--ink-2);
       text-decoration: none;
@@ -174,7 +180,12 @@ body {
       color: var(--accent-text);
     }
     @media (max-width: $screen-sm-max) {
-      gap: 16px;
+      gap: 12px;
+      // The logo already links home, so the redundant "portfolio" link is
+      // hidden on phones — without this the row overflows ~360px-wide screens.
+      li:first-child {
+        display: none;
+      }
     }
   }
   &__status {
@@ -220,9 +231,10 @@ body {
 
 // ---- hero --------------------------------------------------------
 .hero {
-  padding: 76px 0 64px;
+  // vertical only — horizontal padding comes from .shell (see .sec note).
+  padding-block: 76px 64px;
   @media (max-width: $screen-sm-max) {
-    padding: 44px 0 36px;
+    padding-block: 44px 36px;
   }
   &__tag {
     color: var(--ink-2);
@@ -618,11 +630,27 @@ body {
 
 // ---- resume ------------------------------------------------------
 .resume {
+  // Site has no global border-box reset (elements default to content-box),
+  // which made the horizontal padding add on top of the full width here and
+  // push the page wider than the viewport. Pin border-box for this subtree.
+  &,
+  * {
+    box-sizing: border-box;
+  }
   max-width: $maxw;
   margin: 0 auto;
   padding: 24px 48px 72px;
   @media (max-width: $screen-sm-max) {
     padding: 16px 22px 48px;
+  }
+  // PDF canvas: keep the pixel buffer (set via :width) but never let the
+  // rendered element push wider than its container — breaks the resize
+  // feedback loop that otherwise inflated .resume past the viewport.
+  .vue-pdf-embed,
+  .vue-pdf-embed__page,
+  .vue-pdf-embed canvas {
+    max-width: 100%;
+    height: auto;
   }
   &__links {
     display: flex;
@@ -654,7 +682,8 @@ body {
 
 // ---- page intro (projects / resume headers) ----------------------
 .page-head {
-  padding: 60px 0 8px;
+  // vertical only — horizontal padding comes from .shell (see .sec note).
+  padding-block: 60px 8px;
   &__tag {
     color: var(--ink-2);
     font-size: 13px;

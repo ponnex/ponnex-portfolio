@@ -1,4 +1,11 @@
 .thankyou {
+  // No global border-box reset on this site: with content-box the large
+  // horizontal padding stacked on top of the auto width and pushed the page
+  // far past the viewport. Pin border-box so padding stays inside the box.
+  &,
+  * {
+    box-sizing: border-box;
+  }
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 280px;
